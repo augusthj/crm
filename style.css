@@ -5,3 +5,11 @@ table, th, td {
 body{
   background-color: #2e4373;
 }
+button{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.saveChangesButton {
+  margin-top: 10px;
+  background-color: #004d00;
+}
