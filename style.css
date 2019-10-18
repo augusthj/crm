@@ -5,11 +5,16 @@ table, th, td {
 body{
   background-color: #2e4373;
 }
-button{
+.defaultButton{
   border-radius: 5px;
   cursor: pointer;
 }
 .saveChangesButton {
-  margin-top: 10px;
   background-color: #004d00;
+}
+.dangerButton {
+  background-color: #ff1a1a;
+}
+.submitContainer, .ContactInfo {
+  margin-top: 50px;
 }
