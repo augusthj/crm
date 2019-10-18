@@ -1,0 +1,52 @@
+.navbar{
+    border: none;
+    border: none;
+    top: 0px;
+    box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
+    background-color: #2f4880;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: azure;
+    padding: 5px;
+    margin-top: 10px;
+}
+body{
+    background-color: #3f5fa5;
+    font-family: 'Zilla Slab';
+}
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten {
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
+}
+h1{
+    color: azure;
+}
+.pic{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 15px;
+    text-align: center;
+    
+}
+.icon{
+    height: 40px;
+    width: 40px;
+}
+button{
+    border-radius: 10px;
+    border: 2px solid #2f4880;
+    background-color: #3f5fa5;
+    font-size: 20px;
+    margin-left: 15px;
+    color: azure;
+}
+button:hover{
+    cursor: pointer;
+    background: #233458;
+}
