@@ -1,15 +1,15 @@
 .navbar{
     border: none;
-    border: none;
     top: 0px;
     box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
     background-color: #2f4880;
     text-align: center;
+    
 }
 a{
     text-decoration: none;
     color: azure;
-    padding: 5px;
+    padding: 20px;
     margin-top: 10px;
 }
 body{
@@ -40,10 +40,10 @@ h1{
 }
 button{
     border-radius: 10px;
-    border: 2px solid #2f4880;
-    background-color: #3f5fa5;
+    border: 2px solid #0044cc;
+    background-color: #0044cc;
     font-size: 20px;
-    margin-left: 15px;
+    
     color: azure;
 }
 button:hover{
