@@ -14,7 +14,7 @@ $(document).ready(function() {
             "</td><td>" +
             value.phoneNumber +
             "</td><td>" +
-            value.firstName +
+            value.firstName + " " + value.lastName +
             "</td></tr>"
           );
       })
