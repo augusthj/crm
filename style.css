@@ -7,10 +7,32 @@ body {
   background-color: #2e4373;
 }
 
-.companies {}
-
-.companyTitle {}
-
+.companies {
+  display: flex;
+  justify-content: center;
+}
+.addCompany{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+}
+.companyTitle {
+  text-align: center;
+}
+.callToActions {
+  display: flex;
+  justify-content: center;
+}
+.paging{
+  margin: 0px 78px 0px 78px;
+  color: white;
+}
+.nextPagePageBtn{
+  /*margin-right: 30px;*/
+}
+.previousPageBtn{
+  /*margin-left: 30px;*/
+}
 .defaultButton {
   border-radius: 5px;
   cursor: pointer;

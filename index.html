@@ -12,7 +12,12 @@
 
 <body>
   <div class="companyTitle">
-    <h1>Companies</h1>
+    <h1 class="display-2">Companies</h1>
+  </div>
+  <div class="addCompany">
+    <form action="addCompany.html" method="post">
+      <input type="submit" value="Add company" class="ButtonStyle">
+    </form>
   </div>
   <div class="companies">
     <table>
@@ -85,13 +90,12 @@
         </tr>
       </tbody>
     </table>
-    <button type="button" name="button">Next Page</button>
-    <span>Page 1/20</span>
-    <button type="button" name="button" style="">Previous Page</button>
   </div>
-  <form action="addCompany.html" method="post">
-    <input type="submit" value="Add company" class="ButtonStyle">
-  </form>
+  <div class="callToActions">
+    <button type="button" name="button" class="nextPagePageBtn">Next Page</button>
+    <span class="paging">Page 1/20</span>
+    <button type="button" name="button" class="previousPageBtn">Previous Page</button>
+  </div>
 </body>
 
 </html>
