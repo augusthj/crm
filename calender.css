@@ -1,0 +1,61 @@
+body {
+   background-color: #2E4372
+}
+
+.calender-title {
+   background-color: #2E4372;
+   font-weight: bold;
+   font-size: 26px;
+   text-align: center;
+   padding: 15px;
+   
+}
+
+.week-item {
+   display: flex;
+}
+
+.header-item {
+   display: flex;
+   height: 50px;
+   width: 70px;
+   justify-content: center;
+   align-items: center;
+   font-weight: bold;
+   background-color: #061539;
+   color: #7887AB;
+}
+
+.day-item {
+   display: flex;
+   height: 70px;
+   width: 70px;
+   justify-content: center;
+   align-items: center;
+   background-color: #2E4372;
+   border: 1px solid #2E4372;
+   /* transition: border 300ms ease; */
+   /* border: 1px solid red; */
+}
+
+
+.day-item:hover {
+ /*  background-color: #7887AB; */
+   border: 1px solid #7887AB;
+
+   /* border: 1px solid red; */
+
+}
+
+.event {
+   background-color: #162956;
+   color: #7887AB;
+}
+
+#calender-container {
+   font-family: "Zilla Slab", serif;
+   width: 490px;
+   padding: 8px;;
+   border-radius: 10px;
+   box-shadow: 0 15px 25px #03030380;
+}
