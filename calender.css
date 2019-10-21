@@ -1,3 +1,29 @@
+/* From Philip */
+.navbar {
+   border: none;
+   top: 0px;
+   box-shadow: 0 15px 25px #03030380;
+   background-color: #2f4880;       /* Changed */
+   text-align: center;   
+}
+
+.icon {
+   height: 40px;
+   width: 40px;
+}
+
+.navbar a {
+   text-decoration: none;
+   color: azure;
+   padding: 20px;
+   margin-top: 10px;
+}
+.navbar a:hover {
+   color: #233458;
+}
+
+
+/* Calender */
 body {
    background-color: #2E4372
 }
@@ -34,17 +60,11 @@ body {
    align-items: center;
    background-color: #2E4372;
    border: 1px solid #2E4372;
-   /* transition: border 300ms ease; */
-   /* border: 1px solid red; */
 }
 
 
 .day-item:hover {
- /*  background-color: #7887AB; */
    border: 1px solid #7887AB;
-
-   /* border: 1px solid red; */
-
 }
 
 .event {
