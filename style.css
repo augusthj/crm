@@ -1,6 +1,5 @@
 th, td {
   border: 1px solid black;
-  background-color: lightblue;
 }
 
 body {
@@ -26,12 +25,6 @@ body {
 .paging{
   margin: 0px 68px 0px 68px;
   color: white;
-}
-.nextPagePageBtn{
-  /*margin-right: 30px;*/
-}
-.previousPageBtn{
-  /*margin-left: 30px;*/
 }
 .defaultButton {
   border-radius: 5px;
