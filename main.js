@@ -7,16 +7,12 @@ $(document).ready(function() {
       $.each(data, function(key, value) {
         $("#companyTable > tbody")
           .append(
-            "<tr><td><a href='companyPage.html'>" +
-            value.companyName +
-            "</a></td><td>" +
-            value.email +
-            "</td><td>" +
-            value.phoneNumber +
-            "</td><td>" +
-            value.firstName + " " + value.lastName +
-            "</td></tr>"
+            "<tr><td>" + value.id + "</td>" +
+            "<td><a href='companyPage.html'>" + value.companyName +
+            "</a></td><td>" + value.email + "</td><td>" +
+            value.phoneNumber + "</td><td>" + value.firstName +
+            " " + value.lastName + "</td></tr>"
           );
-      })
-    })
+      });
+    });
 });
