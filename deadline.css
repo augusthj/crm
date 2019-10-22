@@ -1,0 +1,14 @@
+
+#titleDeadline{
+    font-size: 15px;
+}
+th{
+    white-space: pre;
+}
+td{
+    white-space: pre;
+}
+.titleLine{
+    font-weight: bold;
+    text-align: center;
+}
