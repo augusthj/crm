@@ -52,10 +52,10 @@ body{
 .box .inputBox input:valid ~ label{
     top: -18px;
     left: 0;
-    color: #233458;
+    color: #3f5fa5;
     font-size: 12px;
 }
-#submit{
+a{
     background: transparent;
     border: none;
     outline: none;
@@ -64,17 +64,19 @@ body{
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
+    width: 100%;
 }
-#submit:hover{
+#link_costumers:hover{
     cursor: pointer;
     background: #233458;
 }
 @media only screen and (max-width: 375px){
     .box {
-        width: 80%;
+        width: 90%;
         height: 50%;
     }
-    #submit{
-        width: 100%;
+    a{
+        padding: 15px 93px;
     }
 }

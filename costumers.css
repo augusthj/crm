@@ -1,4 +1,6 @@
 .navbar{
+    display: flex;
+    padding: 0px 10px;
     border: none;
     top: 0px;
     box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
@@ -23,7 +25,17 @@ body{
 h1, h4{
     color: azure;
 }
-
+.nav-item {
+    display: flex;
+    width: 80px;
+    flex-direction: column;
+    align-items: center;
+    margin: -15px 5px;
+    
+ }
+ .push {
+    margin-left: auto;
+ }
 .icon{
     height: 40px;
     width: 40px;
@@ -71,7 +83,7 @@ input{
     width: 140px;
     height: 250px;
     margin-top: 40px;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     background-color: #233458;
   }
@@ -95,11 +107,17 @@ input{
   }
   @media only screen and (max-width: 375px){
       
-      .navbar{
-        width: 360px;
+    .navbar{
+        width: 95%;
+        flex: none;
     }
-    a{
+    span{
         display: none;
+    }
+    .nav-item{
+        flex: none;
+        text-align: center;
+        width: 10%;
     }
     .icon{
         padding: 10px;
@@ -120,16 +138,22 @@ input{
         
     }
     .card{
-        width: 140px;
+        width: 60%;
         height: 220px;
         margin-left: 5px;
     }
     input{
-        width: 80%;
+        width: 75%;
         height: 40px;
     }
     .search{
         height: 50px;
+    }
+    #icon_search{
+        height: 40px;
+        width: 40px;
+        border: 2px solid azure;
+        background-color: azure;
     }
   }
   
