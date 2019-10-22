@@ -1,10 +1,13 @@
 /* From Philip */
 .navbar {
+   display: flex;
+   padding: 0px 10px;
    border: none;
    top: 0px;
    box-shadow: 0 15px 25px #03030380;
-   background-color: #2f4880;       /* Changed */
-   text-align: center;   
+   background-color: #2E4372;        /* Changed */
+   font-family: "Zilla Slab", serif;   /* Added */
+   /*text-align: center;   */
 }
 
 .icon {
@@ -14,18 +17,46 @@
 
 .navbar a {
    text-decoration: none;
-   color: azure;
-   padding: 20px;
-   margin-top: 10px;
+   color: #7887AB;                  /* Changed */
+   /*padding: 20px;*/
+   /*margin-top: 10px;*/
 }
-.navbar a:hover {
-   color: #233458;
+
+
+/* Added */
+/* .sub-navbar {
+   display: flex;
+}*/
+
+.nav-item {
+   display: flex;
+   width: 80px;
+   flex-direction: column;
+   align-items: center;
+   margin: 2px 5px;
+   border: 1px solid #2E4372;
+}
+
+
+
+.nav-item:hover {
+   border: 1px solid #7887AB;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container*/
+.push {
+   margin-left: auto;
 }
 
 
 /* Calender */
 body {
-   background-color: #2E4372
+   background-color: #2E4372;
+}
+
+#main-container {
+   display: flex;
+   justify-content: center;
 }
 
 .calender-title {
@@ -75,7 +106,9 @@ body {
 #calender-container {
    font-family: "Zilla Slab", serif;
    width: 490px;
-   padding: 8px;;
+   padding: 8px;
+   margin-top: 50px;
    border-radius: 10px;
    box-shadow: 0 15px 25px #03030380;
+
 }
