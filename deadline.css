@@ -1,14 +1,24 @@
-
-#titleDeadline{
-    font-size: 15px;
-}
-th{
-    white-space: pre;
-}
-td{
-    white-space: pre;
-}
-.titleLine{
-    font-weight: bold;
+.modal-body{
     text-align: center;
 }
+.modal-title{
+    text-align: center;
+}
+.modal-header {
+    background-color: #2E4372;
+    color: white;
+    border-radius: 5px !important; 
+  }
+  .modal-body {
+    background-color: #2E4372;
+    color: white;
+    border-radius: 5px !important; 
+  }
+  .modal-footer {
+    background-color: #2E4372;
+    color: white;
+    border-radius: 5px !important; 
+  }
+  .start{
+      text-align: center;
+  }
