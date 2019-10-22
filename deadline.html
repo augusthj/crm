@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>crm</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="deadline.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>crm</h1>
-    <div class="modal-content" id="deadline">
-        <table class="table table-striped table-hover">
-            <tr>
-                <th id="titleDeadline">Important reminders:</th>
-            </tr>
-            <tr>
-                <td class="titleLine">Idag kl 14:20</td>
-            </tr>
-            <tr>
-                <td>Skicka in nytt kontrakt till <br>Nackademin.</td>
-            </tr>
-            <tr>
-                    <td class="titleLine">Imorgon kl 11:30</td>
-                </tr>
-                <tr>
-                    <td>Lunch med product owner <br>Klas.</td>
-                </tr>
-        </table>
-    </div>
+    
+<div class="container">
+    <div class="start">
+        <h3>Username</h3>
+        <input></inpu>
+        <h3>Password</h3>
+        <input></inpu></br><br>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign in</button>
+         </div>
+        <div class="modal fade" id="myModal" role="dialog" data-toggle="modal">
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">Upcoming Deadlines</h3>
+              </div>
+              <div class="modal-body">
+                <p> * Idag kl 10:00 - Möte med Nackademin</p>
+                <hr>
+                <p> * Idag kl 14:30 - Gå igenom avtalet med Monsters inc</p>
+                <hr>
+                <p> * Imorgon kl 11:00 - Skicka in dokumenten till styrelsen</p>
+                <hr>
+                <p> * Imorgon kl 16:00  - Ring Jonas hos Monsters inc</p>
+              </div>
+              
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
 </body>
 </html>
