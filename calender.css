@@ -1,3 +1,9 @@
+body {
+   background-color: #2E4372;
+   font-family: "Zilla Slab", serif;
+}
+
+
 /* From Philip */
 .navbar {
    display: flex;
@@ -15,57 +21,67 @@
    width: 40px;
 }
 
-.navbar a {
-   text-decoration: none;
-   color: #7887AB;                  /* Changed */
-   /*padding: 20px;*/
-   /*margin-top: 10px;*/
-}
-
-
-/* Added */
-/* .sub-navbar {
-   display: flex;
-}*/
 
 .nav-item {
    display: flex;
-   width: 80px;
-   flex-direction: column;
+   flex-direction: column;   
    align-items: center;
+   width: 80px;
    margin: 2px 5px;
    border: 1px solid #2E4372;
+   text-decoration: none;
+   color: #7887AB;
 }
-
-
 
 .nav-item:hover {
    border: 1px solid #7887AB;
 }
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container*/
-.push {
+.push-right {
    margin-left: auto;
 }
 
 
-/* Calender */
-body {
-   background-color: #2E4372;
-}
 
 #main-container {
    display: flex;
    justify-content: center;
+   align-items: flex-end;
+   margin-top: 50px;
+   flex-wrap: wrap;
 }
 
-.calender-title {
+/* Events */
+
+
+
+/* Calender */
+
+#calender-container {
+   font-family: "Zilla Slab", serif;
+   width: 490px;
+   padding: 8px;
+   margin: 5px 10px 0px 10px;
+   border-radius: 10px;
+   box-shadow: 0 15px 25px #03030380;
+}
+
+.title-light {
    background-color: #2E4372;
    font-weight: bold;
    font-size: 26px;
    text-align: center;
-   padding: 15px;
-   
+   padding: 15px;   
+}
+
+.title-dark {
+   background-color: #061539;
+   color: #7887AB;
+   font-weight: bold;
+   font-size: 26px;
+   text-align: center;
+   padding: 15px;   
 }
 
 .week-item {
@@ -93,7 +109,6 @@ body {
    border: 1px solid #2E4372;
 }
 
-
 .day-item:hover {
    border: 1px solid #7887AB;
 }
@@ -103,12 +118,23 @@ body {
    color: #7887AB;
 }
 
-#calender-container {
-   font-family: "Zilla Slab", serif;
-   width: 490px;
+#event-container {
+   width: 300px;
+   height: 472px;
    padding: 8px;
-   margin-top: 50px;
+   margin: 5px 10px 0px 10px;
    border-radius: 10px;
    box-shadow: 0 15px 25px #03030380;
+   background-color: #2E4372;
+}
+
+@media screen and (max-width: 900px) {
+   #event-container {
+      width: 490px;
+      height: 300px;
+
+   }
+
+
 
 }
