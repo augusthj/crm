@@ -1,43 +1,75 @@
-th, td {
-  border: 1px solid black;
+.navbar{
+    border: none;
+    top: 0px;
+    box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
+    background-color: #2f4880;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+    color: azure;
+    padding: 20px;
+    margin-top: 10px;
+}
+a:hover{
+    color: #233458;
+}
+body{
+    background-color: #3f5fa5;
+    font-family: 'Zilla Slab';
 }
 
-body {
-  background-color: #2e4373;
+h1, h4{
+    color: azure;
 }
+.pic{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 15px;
+    text-align: center;
 
-.companies {
-  display: flex;
-  justify-content: center;
 }
-.addCompany{
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px 20px 0px;
+.icon{
+    height: 40px;
+    width: 40px;
 }
-.companyTitle {
-  text-align: center;
+button{
+    border-radius: 10px;
+    border: 2px solid #0044cc;
+    background-color: #0044cc;
+    font-size: 20px;
+    color: azure;
 }
-.callToActions {
-  display: flex;
-  justify-content: center;
+button:hover{
+    cursor: pointer;
+    background: #233458;
 }
-.paging{
-  color: white;
-}
-.defaultButton {
-  border-radius: 5px;
-  cursor: pointer;
-}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 140px;
+    height: 250px;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #233458;
+  }
 
-.saveChangesButton {
-  background-color: #004d00;
-}
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+  }
 
-.dangerButton {
-  background-color: #ff1a1a;
-}
-
-.submitContainer, .ContactInfo {
-  margin-top: 50px;
-}
+  .container {
+    padding: 2px 16px;
+  }
+  .cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 15px;
+    text-align: center;
+  }
+  .card_style{
+      margin-top: 25px;
+      height: 100px;
+  }
