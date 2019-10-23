@@ -113,7 +113,7 @@ body {
    border: 1px solid #7887AB;
 }
 
-.event {
+.event-day {
    background-color: #162956;
    color: #7887AB;
 }
@@ -126,6 +126,13 @@ body {
    border-radius: 10px;
    box-shadow: 0 15px 25px #03030380;
    background-color: #2E4372;
+}
+
+.event {
+   background-color: #7887AB;
+   border-radius: 2px;
+   padding: 5px 10px;
+
 }
 
 @media screen and (max-width: 900px) {
