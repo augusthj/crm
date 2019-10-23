@@ -8,7 +8,7 @@ $(document).ready(function() {
         $("#companyTable > tbody")
           .append(
             "<tr><td>" + value.id + "</td>" +
-            "<td><a href='companyPage.html'>" + value.companyName +
+            "<td><a href='' id=" + value.id + ">" + value.companyName +
             "</a></td><td>" + value.email + "</td><td>" +
             value.phoneNumber + "</td><td>" + value.firstName +
             " " + value.lastName + "</td></tr>"
