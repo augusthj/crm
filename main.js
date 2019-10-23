@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("Hello");
   $.ajax({
       method: "GET",
       url: "http://5da7897d23fa740014697829.mockapi.io/customer"
@@ -15,4 +14,17 @@ $(document).ready(function() {
           );
       });
     });
+  let modal = $("#newCompany");
+  $("#addCompany").click(function() {
+    modal.attr("style", "display:block");
+  });
+  $(".close").click(function() {
+    modal.attr("style", "display:none");
+  });
+  window.onclick = function(event) {
+    if (event.target == document.getElementById("newCompany")) {
+      modal.attr("style", "display:none");
+      console.log(event.target);
+    }
+  }
 });
