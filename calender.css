@@ -84,6 +84,11 @@ body {
    padding: 15px;   
 }
 
+.subtitle {
+   font-size: 20px;
+   padding: 10px;
+}
+
 .week-item {
    display: flex;
 }
@@ -132,7 +137,7 @@ body {
    background-color: #7887AB;
    border-radius: 2px;
    padding: 5px 10px;
-
+   margin: 5px 0px;
 }
 
 @media screen and (max-width: 900px) {
