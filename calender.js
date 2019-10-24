@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       console.log(tempElement);
    }
 
-
-
    function showEvent() {
       console.log("Boton oprimido");
       newEvent = document.createElement("p");
@@ -27,8 +25,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-/*
 
+
+
+
+
+
+
+
+/*
 $.ajax({
    method: "POST",
    url: "https://5da7897d23fa740014697829.mockapi.io/events",
@@ -40,13 +45,22 @@ $.ajax({
    });
 
 
+getMonthMockapiEvents();
 
-$.ajax({
-   method: "GET",
-   url: "https://5da7897d23fa740014697829.mockapi.io/events",
- })
-   .done(function( msg ) {
-      console.log(msg)
-     
-   });
+function getMonthMockapiEvents() {
+
+   let allEvents;
+
+   $.ajax({
+      method: "GET",
+      url: "https://5da7897d23fa740014697829.mockapi.io/events",
+   })
+      .done(function (msg) {
+         allEvents = msg;
+         console.log(allEvents);
+      });
+   
+   
+
+} 
 */
