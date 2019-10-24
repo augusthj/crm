@@ -13,19 +13,17 @@ class CalEvent {
    Load here events that will appear on the calender.
    'date' is the day of the month.
 */
-
-
 var preEvents = [
    {
-      event:   "Make the proyect",
+      event:   "08:00 - Make the proyect",
       date:    "01"
    },
    {
-      event:   "Call Isabella",
+      event:   "13:30 - Call Isabella",
       date:    "23"
    },
    {
-      event:   "Reprogram the program",
+      event:   "16:00 - Reprogram the program",
       date:    "15"
    },
 ];

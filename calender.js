@@ -1,23 +1,37 @@
 document.addEventListener("DOMContentLoaded", function(event) {
    
    let eventHere = document.getElementById("event-here");
-
-   let someText = "16:00 - Do the laundry";
    let newEvent;
 
+   /* set addListener to all buttons*/
    for (let i=1; i <= 31; i++) {
       let tempElement = document.getElementById("day" + i);
       tempElement.addEventListener("click", showEvent);
-      console.log(tempElement);
    }
 
    function showEvent() {
-      console.log("Boton oprimido");
       newEvent = document.createElement("p");
-      console.log(newEvent);
-      newEvent.innerHTML = someText;
-      newEvent.classList.add("event");
-      eventHere.appendChild(newEvent);
+      //console.log(newEvent);
+      let clicked = this.innerHTML; // innerHTML of the clicked button
+
+      for (const iterator of events) {
+         if (iterator.date.getDate() == clicked){
+            console.log("Yes: " + clicked);
+            newEvent.innerHTML = iterator.getEvent();
+            newEvent.classList.add("event");
+            eventHere.appendChild(newEvent);
+         }
+      }
+   }
+
+   loadEventsOnCalendar();
+
+   function loadEventsOnCalendar() {
+      for (const iterator of events) {
+         let temp = eval("day" + iterator.date.getDate());
+         temp.classList.add("event-day");
+      }
+
    }
 
 
