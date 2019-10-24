@@ -10,7 +10,7 @@ $(document).ready(function() {
             "<div class='card'>" + "<img class='card_style' src='" + value.avatar +
             "' alt='Avatar' style='width:100%'>" +
             "<div class='container'>" + "<h4>" + "<b>" + value.companyName + "</b>" + "</h4>" +
-            "<button>More</button>" + "</div>" + "</div>"
+            "<button id='" + value.id + "'>More</button>" + "</div>" + "</div>"
           );
       });
     });
