@@ -10,23 +10,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
    function showEvent() {
-      newEvent = document.createElement("p");
+      //todo: clear div before printing
+      clearBox(eventHere);
+     
       //console.log(newEvent);
       let clicked = this.innerHTML; // innerHTML of the clicked button
 
-      for (const iterator of events) {
-         if (iterator.date.getDate() == clicked) {
-            console.log("Yes: " + clicked);
-            newEvent.innerHTML = iterator.getEvent();
-            newEvent.classList.add("event");
-            eventHere.appendChild(newEvent);
-         }
+      $.ajax({
+         method: "GET",
+         url: "https://5da7897d23fa740014697829.mockapi.io/events",
+      })
+         .done(function (msg) {
+            for (const iterator of msg) {
+               // .date from API are strings. Parsing to Date for easier handling.
+               let tempDate = new Date(iterator.date);
+               
+               // Filter for 2019 - October - day clicked
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9" && tempDate.getDate() == clicked) {
+                  console.log(iterator.description);
+                  newEvent = document.createElement("p");
+                  newEvent.innerHTML = iterator.description;
+                  newEvent.classList.add("event");
+                  eventHere.appendChild(newEvent);
+                  
+               }
+            }
+         });
+
+   }
+
+   function clearBox(elementID) {
+      while (elementID.firstChild) {
+         elementID.removeChild(elementID.firstChild);
       }
    }
 
    loadEventsOnCalendar();
 
-   // Shows on the calender the days with events
+   // Shows/color on the calendar the days with events
    function loadEventsOnCalendar() {
       $.ajax({
          method: "GET",
@@ -42,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                   // Add class "event-day" to days on calendar.
                   let fakeElement = eval("day" + tempDate.getDate());
+                  console.log(iterator.date);
+                  console.log(tempDate);
                   fakeElement.classList.add("event-day");
                }
             }
