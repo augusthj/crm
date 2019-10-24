@@ -5,7 +5,6 @@ $(document).ready(function() {
       })
       .done(function(data) {
         $.each(data, function(key, value) {
-            console.log(value);
           $(".events")              
             .append(
                 "<tr>" +
@@ -16,5 +15,23 @@ $(document).ready(function() {
               "</tr>"
             );
         });
+        var number = 0;
+        $.each(data, function(key, value) {
+            if(number < 2){
+            $(".modal-body")             
+              .append(
+                "<p>&#9679;" + value.date +  "&#10097;" +  value.custmerid + "</p>" +
+                "<hr></hr>"
+              );
+            }else if(number < 3){
+                $(".modal-body")             
+                  .append(
+                    "<p>&#9679;" + value.date +  "&#10097;" +  value.custmerid + "</p>"
+                  );
+                }else if(number > 3){
+                return false;
+                 }
+          number += 1;
+          });
       });
   });
