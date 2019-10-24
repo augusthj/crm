@@ -4,55 +4,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
    let dayMonth = document.getElementById("day-month");
    let newEvent;
 
-   /* set addListener to all buttons*/
+   loadEventsOnCalendar();
+
+   // Set addListener to all buttons
    for (let i = 1; i <= 31; i++) {
       let tempElement = document.getElementById("day" + i);
       tempElement.addEventListener("click", showEvent);
    }
 
-   function showEvent() {
-      let clicked = this.innerHTML; // innerHTML of the clicked button
-      showDayMonth(clicked);
-      // Clear div before printing
-      clearBox(eventHere);
-     
-
-      $.ajax({
-         method: "GET",
-         url: "https://5da7897d23fa740014697829.mockapi.io/events",
-      })
-         .done(function (msg) {
-            for (const iterator of msg) {
-               // .date from API are strings. Parsing to Date for easier handling.
-               let tempDate = new Date(iterator.date);
-               
-               // Filter for 2019 - October - day clicked
-               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9" && tempDate.getDate() == clicked) {
-                  console.log(iterator.description);
-                  newEvent = document.createElement("p");
-                  newEvent.innerHTML = iterator.description;
-                  newEvent.classList.add("event");
-                  eventHere.appendChild(newEvent);
-                  
-               }
-            }
-         });
-
-   }
-
-   function showDayMonth(day) {
-      dayMonth.innerHTML = "October " + day;
-   }
-
-   function clearBox(elementID) {
-      while (elementID.firstChild) {
-         elementID.removeChild(elementID.firstChild);
-      }
-   }
-
-   loadEventsOnCalendar();
-
-   // Shows/color on the calendar the days with events
+   /*
+      Read all events on MockApi - AJAX
+      Choose event that has the year-month wished.
+      Take the day from that event and show/color it on calendar.
+   */
    function loadEventsOnCalendar() {
       $.ajax({
          method: "GET",
@@ -76,6 +40,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
          });
    }
 
+   /*
+      When clicking on a day:
+      Read all events on MockApi - AJAX
+      Choose event that has the year-month-[day-clicked]
+      Take the description from that event and print it.
+   */
+   function showEvent() {
+      let clicked = this.innerHTML; // innerHTML of the clicked button
+      showDayMonth(clicked);
+      clearBox(eventHere); // Clear div before printing     
+
+      $.ajax({
+         method: "GET",
+         url: "https://5da7897d23fa740014697829.mockapi.io/events",
+      })
+         .done(function (msg) {
+            for (const iterator of msg) {
+               // .date from API are strings. Parsing to Date for easier handling.
+               let tempDate = new Date(iterator.date);
+
+               // Filter for 2019 - October - day clicked
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9" && tempDate.getDate() == clicked) {
+                  console.log(iterator.description);
+                  newEvent = document.createElement("p");
+                  newEvent.innerHTML = iterator.description;
+                  newEvent.classList.add("event");
+                  eventHere.appendChild(newEvent);
+               }
+            }
+         });
+   }
+
+   // Show day and month as subtitle when clicking a day on calendar
+   function showDayMonth(day) {
+      dayMonth.innerHTML = "October " + day;
+   }
+
+   // Clear an element from child elements
+   function clearBox(elementID) {
+      while (elementID.firstChild) {
+         elementID.removeChild(elementID.firstChild);
+      }
+   }
 
 })
 
