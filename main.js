@@ -24,7 +24,6 @@ $(document).ready(function() {
   window.onclick = function(event) {
     if (event.target == document.getElementById("newCompany")) {
       modal.attr("style", "display:none");
-      console.log(event.target);
     }
   }
 });

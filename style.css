@@ -94,7 +94,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
+.newCompany-content {
+  font-family: 'Zilla Slab';
   background-color: #3f5fa5;
   margin: 10% auto;
   padding: 25px;
