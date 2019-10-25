@@ -105,6 +105,8 @@ body {
    font-weight: bold;
    background-color: #061539;
    color: #7887AB;
+   border: 1px solid #061539;
+   margin-bottom: 1px;
 }
 
 .day-item {
@@ -134,9 +136,40 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+
+   #main-container {
+      margin-top: 30px;
+   }
+
    #event-container {
       width: 490px;
       height: 300px;
+   }
+}
 
+@media screen and (max-width: 560px) {
+   #main-container {
+      margin-top: 20px;
+   }
+
+   #event-container {
+      width: 320px;
+      height: 300px;
+   }
+
+   #calender-container {
+      width: 320px;
+   }
+
+   .header-item {
+      height: 43px;
+      width: 43px;
+      font-size: 18px;
+   }
+   
+   .day-item {
+      height: 43px;
+      width: 43px;
+      font-size: 18px;
    }
 }
