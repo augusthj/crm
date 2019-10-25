@@ -21,6 +21,28 @@ $(document).ready(function() {
   $(".close").click(function() {
     modal.attr("style", "display:none");
   });
+  $("#submit").click(function() {
+    $.ajax({
+        method: "POST",
+        url: "https://5da7897d23fa740014697829.mockapi.io/customer",
+        data: {
+          companyName: $("#company_name").val(),
+          email: $("#email").val(),
+          phoneNumber: $("#phone").val(),
+          firstName: $("#contact_first_name").val(),
+          lastName: $("#contact_last_name").val()
+        }
+      })
+      .done(function(msg) {
+        console.log(msg);
+      });
+      $(".newCompany-content :input").val("");
+      modal.attr("style", "display:none");
+  });
+  $("#cancel").click(function() {
+    modal.attr("style", "display:none");
+    $(".newCompany-content :input").val("");
+  });
   window.onclick = function(event) {
     if (event.target == document.getElementById("newCompany")) {
       modal.attr("style", "display:none");

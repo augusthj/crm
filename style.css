@@ -16,7 +16,6 @@ a {
 a:hover {
   color: #233458;
 }
-
 body {
   background-color: #3f5fa5;
   font-family: 'Zilla Slab';
@@ -95,16 +94,20 @@ button:hover {
 }
 
 .newCompany-content {
-  font-family: 'Zilla Slab';
   background-color: #3f5fa5;
   margin: 10% auto;
   padding: 25px;
   border: 1px solid #3f5fa5;
   border-radius: 10px;
-  height: 50%;
-  width: 65%;
+  height: 25%;
+  width: 35%;
 }
-
+.modal-label{
+  font-size: 26px;
+}
+.modal-buttons{
+  margin-top: 5%;
+}
 .close {
   color: #ff1a1a;
   float: right;
