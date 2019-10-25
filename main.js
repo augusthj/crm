@@ -10,16 +10,18 @@ $(document).ready(function() {
             "<div class='card'>" + "<img class='card_style' src='" + value.avatar +
             "' alt='Avatar' style='width:100%'>" +
             "<div class='container'>" + "<h4>" + "<b>" + value.companyName + "</b>" + "</h4>" +
-            "<button id='" + value.id + "'>More</button>" + "</div>" + "</div>"
+            "<button class='companyCard' id='" + value.id + "'>More</button>" + "</div>" + "</div>"
           );
       });
     });
-  let modal = $("#newCompany");
+  let newCompanyModal = $("#newCompany");
   $("#addCompany").click(function() {
-    modal.attr("style", "display:block");
+    companyModal.attr("style", "display:block");
+
+    //newCompanyModal.attr("style", "display:block");
   });
   $(".close").click(function() {
-    modal.attr("style", "display:none");
+    newCompanyModal.attr("style", "display:none");
   });
   $("#submit").click(function() {
     $.ajax({
@@ -37,15 +39,22 @@ $(document).ready(function() {
         console.log(msg);
       });
       $(".newCompany-content :input").val("");
-      modal.attr("style", "display:none");
+      newCompanyModal.attr("style", "display:none");
   });
   $("#cancel").click(function() {
-    modal.attr("style", "display:none");
+    newCompanyModal.attr("style", "display:none");
     $(".newCompany-content :input").val("");
   });
+  let companyModal = $("#company");
+  $(".cards").on("click", "button.companyCard", function(event){
+    let idOfButton = Number(event.target.id);
+    companyModal.attr("style", "display:block");
+  });
+
   window.onclick = function(event) {
-    if (event.target == document.getElementById("newCompany")) {
-      modal.attr("style", "display:none");
+    if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company")) {
+      newCompanyModal.attr("style", "display:none");
+      companyModal.attr("style", "display:none");
     }
   }
 });
