@@ -15,14 +15,17 @@ $(document).ready(function() {
       });
     });
   let newCompanyModal = $("#newCompany");
-  $("#addCompany").click(function() {
-    companyModal.attr("style", "display:block");
+  let companyModal = $("#company");
 
-    //newCompanyModal.attr("style", "display:block");
+  $("#addCompany").click(function() {
+    newCompanyModal.attr("style", "display:block");
   });
+
   $(".close").click(function() {
     newCompanyModal.attr("style", "display:none");
+    companyModal.attr("style", "display:none");
   });
+
   $("#submit").click(function() {
     $.ajax({
         method: "POST",
@@ -45,7 +48,6 @@ $(document).ready(function() {
     newCompanyModal.attr("style", "display:none");
     $(".newCompany-content :input").val("");
   });
-  let companyModal = $("#company");
   $(".cards").on("click", "button.companyCard", function(event){
     let idOfButton = Number(event.target.id);
     companyModal.attr("style", "display:block");
