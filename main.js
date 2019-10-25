@@ -50,7 +50,19 @@ $(document).ready(function() {
   });
   $(".cards").on("click", "button.companyCard", function(event){
     let idOfButton = Number(event.target.id);
-    companyModal.attr("style", "display:block");
+    $.ajax({
+        method: "GET",
+        url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + idOfButton,
+      })
+      .done(function(data){
+        console.log(data);
+        $("#companyName").text(data.companyName);
+        $("#email").text(data.email);
+        $("#phone").text(data.phoneNumber);
+        $("#firstName").text(data.firstName);
+        $("#lastName").text(data.lastName);
+        companyModal.attr("style", "display:block");
+      });
   });
 
   window.onclick = function(event) {
