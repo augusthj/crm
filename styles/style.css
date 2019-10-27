@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-   width: 50px;
+   width: 55px;
 }
 
 .nav-item {
@@ -57,6 +57,24 @@ body {
    margin: 50px 5px 5px 5px;
 }
 
+
+
+/*--------------------Temp--------------------*/
+
 h1 {
    text-align: center;
+}
+
+.center {
+   display: flex;
+   justify-content: center;
+}
+
+.shadow {
+   width: 300px;
+   padding: 30px 8px;
+   margin: 120px 10px 0px 10px;
+   border-radius: 10px;
+   box-shadow: 0 15px 25px #03030380;
+   background-color: #2E4372;
 }
