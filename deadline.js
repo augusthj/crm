@@ -1,32 +1,49 @@
+
+
 $(document).ready(function() {
     $.ajax({
         method: "GET",
-        url: "https://5da7897d23fa740014697829.mockapi.io/events"
+        url: "https://5db2bba7e9751d0014cd05bb.mockapi.io/events"
       })
       .done(function(data) {
         $.each(data, function(key, value) {
+          let date = new Date(value.date);
+          let year = date.getFullYear();
+          let month = date.getMonth();
+          let day = date.getDay();
+          let hour = date.getHours();
+          let minute = date.getMinutes();
           $(".events")              
             .append(
                 "<tr>" +
-                "<th scope='row'>" + value.id + "</th>" +
-                "<td>" + value.date + "</td>" +
-                "<td>" + value.custmerid + "</td>" +
+                "<td>" + day + ":" + month + ":" + year + "</td>" +
+                "<td>" + hour + ":" + minute + "</td>" +
+                "<td>" + value.companyName + "</td>" +
                 "<td>" + value.description + "</td>" +
+                "<td>" + value.custmerid + "</td>" +
               "</tr>"
             );
         });
         var number = 0;
         $.each(data, function(key, value) {
+          let date = new Date(value.date);
+          let year = date.getFullYear();
+          let month = date.getMonth();
+          let day = date.getDay();
+          let hour = date.getHours();
+          let minute = date.getMinutes();
             if(number < 2){
             $(".modal-body")             
               .append(
-                "<p>&#9679;" + value.date +  "&#10097;" +  value.custmerid + "</p>" +
+                "<p> &#x1F552; " + hour + ":" + minute + " &#9679; " +  value.companyName +  
+                " &#10097; " + value.description + "</p>" +
                 "<hr></hr>"
               );
             }else if(number < 3){
                 $(".modal-body")             
                   .append(
-                    "<p>&#9679;" + value.date +  "&#10097;" +  value.custmerid + "</p>"
+                    "<p> &#x1F552; " + hour + ":" + minute + " &#9679; " +  value.companyName + 
+                    " &#10097; " + value.description + "</p>"
                   );
                 }else if(number > 3){
                 return false;

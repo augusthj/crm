@@ -49,3 +49,6 @@
   h1, h4 {
     color: azure;
   }
+  .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: rgba(66, 48, 114, 0.404);
+  }
