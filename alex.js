@@ -16,9 +16,15 @@ $(document).ready(function() {
     });
   let newCompanyModal = $("#newCompany");
   let companyModal = $("#company");
+  let editCompanyModal = $("#editCompanyModal");
 
   $("#addCompany").click(function() {
     newCompanyModal.attr("style", "display:block");
+  });
+
+  $("#editCompany").click(function(){
+    companyModal.attr("style", "display:none");
+    editCompanyModal.attr("style", "display:block");
   });
 
   $(".close").click(function() {
@@ -41,22 +47,23 @@ $(document).ready(function() {
       .done(function(msg) {
         console.log(msg);
       });
-      $(".newCompany-content :input").val("");
-      newCompanyModal.attr("style", "display:none");
+    $(".newCompany-content :input").val("");
+    newCompanyModal.attr("style", "display:none");
   });
   $("#cancel").click(function() {
     newCompanyModal.attr("style", "display:none");
     $(".newCompany-content :input").val("");
   });
-  $(".cards").on("click", "button.companyCard", function(event){
+  $(".cards").on("click", "button.companyCard", function(event) {
     let idOfButton = Number(event.target.id);
     $.ajax({
         method: "GET",
         url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + idOfButton,
       })
-      .done(function(data){
+      .done(function(data) {
         console.log(data);
         $("#companyName").text(data.companyName);
+        // TODO: Make it so the email prints out into the H2 tag.
         $("#email").text(data.email);
         $("#phone").text(data.phoneNumber);
         $("#firstName").text(data.firstName);
@@ -64,9 +71,8 @@ $(document).ready(function() {
         companyModal.attr("style", "display:block");
       });
   });
-
   window.onclick = function(event) {
-    if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company")) {
+    if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company") || event.target == document.getElementById("editCompanyModal")) {
       newCompanyModal.attr("style", "display:none");
       companyModal.attr("style", "display:none");
     }
