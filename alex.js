@@ -30,6 +30,7 @@ $(document).ready(function() {
   $(".close").click(function() {
     newCompanyModal.attr("style", "display:none");
     companyModal.attr("style", "display:none");
+    editCompanyModal.attr("style", "display:none");
   });
 
   $("#submit").click(function() {
@@ -75,6 +76,7 @@ $(document).ready(function() {
     if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company") || event.target == document.getElementById("editCompanyModal")) {
       newCompanyModal.attr("style", "display:none");
       companyModal.attr("style", "display:none");
+      editCompanyModal.attr("style", "display:none");
     }
   }
 });
