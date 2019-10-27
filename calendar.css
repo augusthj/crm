@@ -64,7 +64,7 @@ body {
 * === CALENDAR ===
 */
 
-#calender-container {
+#calendar-container {
    font-family: "Zilla Slab", serif;
    width: 490px;
    padding: 8px;
@@ -183,7 +183,7 @@ body {
       height: 300px;
    }
 
-   #calender-container {
+   #calendar-container {
       width: 320px;
    }
 
