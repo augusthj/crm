@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let tempElement = document.getElementById("day" + i);
       tempElement.addEventListener("click", showEvent);
    }
+   
 
    /*
       Read all events on MockApi - AJAX
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
          });
    }
+
 
    /*
       When clicking on a day:

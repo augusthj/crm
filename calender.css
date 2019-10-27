@@ -4,7 +4,11 @@ body {
 }
 
 
-/* Nav bar */
+
+/*
+* === NAVBAR ===
+*/
+
 .navbar {
    display: flex;
    padding: 0px 10px;
@@ -35,13 +39,17 @@ body {
    border: 1px solid #7887AB;
 }
 
-/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container*/
+/* Push item to te right on navbar */
 .push-right {
    margin-left: auto;
 }
 
 
-/* Main Container*/
+
+/*
+* === MAIN CONTAINER ===
+*/
+
 #main-container {
    display: flex;
    justify-content: center;
@@ -50,7 +58,12 @@ body {
    flex-wrap: wrap;
 }
 
-/* Calender */
+
+
+/*
+* === CALENDAR ===
+*/
+
 #calender-container {
    font-family: "Zilla Slab", serif;
    width: 490px;
@@ -135,6 +148,12 @@ body {
    margin: 5px 0px;
 }
 
+
+
+/*
+* === RESPONSIVE FOR LAPTOP / TABLET ===
+*/
+
 @media screen and (max-width: 900px) {
 
    #main-container {
@@ -147,7 +166,14 @@ body {
    }
 }
 
+
+
+/*
+* === RESPONSIVE FOR TABLET / MOBILE DEVICE ===
+*/
+
 @media screen and (max-width: 560px) {
+
    #main-container {
       margin-top: 20px;
    }
@@ -173,3 +199,4 @@ body {
       font-size: 18px;
    }
 }
+
