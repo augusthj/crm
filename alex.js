@@ -86,7 +86,7 @@ $(document).ready(function() {
     })
     .done(function(){
       location.reload(true);
-    })
+    });
   });
   window.onclick = function(event) {
     if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company") || event.target == document.getElementById("editCompanyModal")) {
