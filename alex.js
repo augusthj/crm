@@ -81,12 +81,30 @@ $(document).ready(function() {
   });
   $("#deleteCustomer").click(function() {
     $.ajax({
-      method: "DELETE",
-      url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + $("#companyId").text()
-    })
-    .done(function(){
-      location.reload(true);
-    });
+        method: "DELETE",
+        url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + $("#companyId").text()
+      })
+      .done(function() {
+        location.reload(true);
+      });
+  });
+  $("#saveChanges").click(function() {
+    $.ajax({
+        method: "PUT",
+        url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + $("#companyId").text(),
+        data: {
+          companyName: $("#nameForCompany").val(),
+          email: $("#emailForCompany").val(),
+          phoneNumber: $("#phoneNumber").val(),
+          firstName: $("#contactFirstName").val(),
+          lastName: $("#contactLastName").val()
+        }
+      })
+      .done(function(msg) {
+        console.log(msg);
+        editCompanyModal.attr("style", "display:none");
+        location.reload(true);
+      });
   });
   window.onclick = function(event) {
     if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company") || event.target == document.getElementById("editCompanyModal")) {
