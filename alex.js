@@ -79,6 +79,15 @@ $(document).ready(function() {
         companyModal.attr("style", "display:block");
       });
   });
+  $("#deleteCustomer").click(function() {
+    $.ajax({
+      method: "DELETE",
+      url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + $("#companyId").text()
+    })
+    .done(function(){
+      location.reload(true);
+    })
+  });
   window.onclick = function(event) {
     if (event.target == document.getElementById("newCompany") || event.target == document.getElementById("company") || event.target == document.getElementById("editCompanyModal")) {
       newCompanyModal.attr("style", "display:none");
