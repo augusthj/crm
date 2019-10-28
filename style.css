@@ -16,6 +16,7 @@ a {
 a:hover {
   color: #233458;
 }
+
 body {
   background-color: #3f5fa5;
   font-family: 'Zilla Slab';
@@ -92,45 +93,52 @@ button:hover {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#saveChanges{
+
+#saveChanges {
   background-color: #004d00;
   border: 2px solid #004d00;
-  margin-left: 10px;
 }
-#deleteCustomer{
+
+#deleteCustomer {
   background-color: #ff1a1a;
   border: 2px solid #ff1a1a;
-  margin-right: 10px;
 }
-#cancel{
+
+#cancel {
   float: left;
   background-color: #ff1a1a;
   border: 2px solid #ff1a1a;
 }
-#submit{
+
+#submit {
   float: right;
   background-color: #004d00;
   border: 2px solid #004d00;
 }
-#editCompany{
+
+#editCompany {
   float: right;
 }
-.newCompany-content, .company-content, .editCompany-content{
+
+.newCompany-content, .company-content, .editCompany-content {
   background-color: #3f5fa5;
   margin: 10% auto;
-  padding: 12.5px;
+  padding: 25px;
   border: 1px solid #3f5fa5;
   border-radius: 10px;
   height: 70%;
   width: 35%;
   overflow-y: auto;
 }
-.modal-label{
+
+.modal-label {
   font-size: 26px;
 }
-.modal-buttons{
+
+.modal-buttons {
   margin-top: 5%;
 }
+
 .close {
   color: #ff1a1a;
   float: right;
