@@ -151,3 +151,35 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+.hiddenId{
+  display: none;
+}
+@media only screen and (max-width: 375px) {
+  .box {
+    width: 90%;
+    height: 50%;
+  }
+
+  a {
+    padding: 15px 93px;
+  }
+
+  .newCompany-content {
+    height: 30%;
+    width: 30%;
+  }
+
+  .company-content {
+    height: 30%;
+    width: 35%;
+  }
+
+  .editCompany-content {
+    height: 20%;
+    width: 28%;
+  }
+  #deleteCustomer{
+    margin-top: 20%;
+    position: relative;
+  }
+}
