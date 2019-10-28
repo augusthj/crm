@@ -69,7 +69,7 @@ $(document).ready(function() {
         $("#companyEmail").text(data.email);
         $("#firstName").text(data.firstName);
         $("#lastName").text(data.lastName);
-        $("#companyId").val(data.id);
+        $("#companyId").text(data.id);
         //For the edit modal
         $("#nameForCompany").val(data.companyName);
         $("#emailForCompany").val(data.email);
