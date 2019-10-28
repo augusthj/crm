@@ -45,8 +45,7 @@ $(document).ready(function() {
           lastName: $("#contact_last_name").val()
         }
       })
-      .done(function(msg) {
-        console.log(msg);
+      .done(function() {
       });
     $(".newCompany-content :input").val("");
     newCompanyModal.attr("style", "display:none");
@@ -62,7 +61,6 @@ $(document).ready(function() {
         url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + idOfButton,
       })
       .done(function(data) {
-        console.log(data);
         $("#companyName").text(data.companyName);
         // TODO: Make it so the email prints out into the H2 tag.
         $("#phone").text(data.phoneNumber);
@@ -100,8 +98,7 @@ $(document).ready(function() {
           lastName: $("#contactLastName").val()
         }
       })
-      .done(function(msg) {
-        console.log(msg);
+      .done(function() {
         editCompanyModal.attr("style", "display:none");
         location.reload(true);
       });
