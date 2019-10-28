@@ -1,6 +1,7 @@
 body {
-   background-color: #2E4372;
+   background-color: #3f5fa5;
    font-family: "Zilla Slab", serif;
+   color: azure;
 }
 
 
@@ -16,6 +17,20 @@ body {
    box-shadow: 0 15px 25px #03030380;
    background-color: #2E4372;
    font-family: "Zilla Slab", serif;
+}
+.logo:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+ }
+
+a:hover{
+   color: #233458;
+}
+
+a{
+   text-decoration: none;
+    color: azure;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .icon {
@@ -33,10 +48,10 @@ body {
    align-items: center;
    justify-content: center;
    width: 80px;
-   margin: 2px 5px;
+   margin: 2px 25px;
    border: 1px solid #2E4372;
    text-decoration: none;
-   color: #7887AB;
+   color: azure;
 }
 
 .nav-item:hover {
