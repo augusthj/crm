@@ -72,3 +72,39 @@ a{
 
 
 
+
+
+
+/*
+* === RESPONSIVE FOR LAPTOP / TABLET ===
+*/
+
+@media screen and (max-width: 900px) {
+
+   .nav-item {
+      margin: 2px 15px;
+   }
+
+   .push-right { margin-left: auto; }
+   
+}
+
+
+
+/*
+* === RESPONSIVE FOR TABLET / MOBILE DEVICE ===
+*/
+
+@media screen and (max-width: 560px) {
+
+   .nav-item {
+      margin: 2px 5px;
+   }
+
+   .navbar > a > span {
+      display: none;
+   }
+
+   .push-right { margin-left: auto; }
+}
+
