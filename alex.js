@@ -22,7 +22,7 @@ $(document).ready(function() {
     newCompanyModal.attr("style", "display:block");
   });
 
-  $("#editCompany").click(function(){
+  $("#editCompany").click(function() {
     companyModal.attr("style", "display:none");
     editCompanyModal.attr("style", "display:block");
   });
@@ -69,6 +69,13 @@ $(document).ready(function() {
         $("#phone").text(data.phoneNumber);
         $("#firstName").text(data.firstName);
         $("#lastName").text(data.lastName);
+        $("#companyId").val(data.id);
+        //For the edit modal
+        $("#nameForCompany").val(data.companyName);
+        $("#emailForCompany").val(data.email);
+        $("#phoneNumber").val(data.phoneNumber);
+        $("#contactFirstName").val(data.firstName);
+        $("#contactLastName").val(data.lastName);
         companyModal.attr("style", "display:block");
       });
   });
