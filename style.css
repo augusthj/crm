@@ -97,11 +97,13 @@ button:hover {
 #saveChanges {
   background-color: #004d00;
   border: 2px solid #004d00;
+  float: right;
 }
 
 #deleteCustomer {
   background-color: #ff1a1a;
   border: 2px solid #ff1a1a;
+  float: left;
 }
 
 #cancel {
@@ -116,10 +118,6 @@ button:hover {
   border: 2px solid #004d00;
 }
 
-#editCompany {
-  float: right;
-}
-
 .newCompany-content, .company-content, .editCompany-content {
   background-color: #3f5fa5;
   margin: 10% auto;
@@ -129,6 +127,21 @@ button:hover {
   height: 70%;
   width: 35%;
   overflow-y: auto;
+}
+
+.company-content {
+  height: 70%;
+  width: 20%;
+}
+
+.editCompany-content {
+  height: 45%;
+  width: 35%;
+}
+
+.newCompany-content {
+  height: 50%;
+  width: 30%;
 }
 
 .modal-label {
@@ -151,9 +164,11 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
-.hiddenId{
+
+.hiddenId {
   display: none;
 }
+
 @media only screen and (max-width: 375px) {
   .box {
     width: 90%;
@@ -165,21 +180,37 @@ button:hover {
   }
 
   .newCompany-content {
-    height: 30%;
-    width: 30%;
+    height: auto;
+    width: 28%;
   }
 
   .company-content {
-    height: 30%;
+    height: auto;
     width: 35%;
   }
-
+  .company-content > div{
+    margin-top: 5%;
+  }
   .editCompany-content {
-    height: 20%;
+    height: auto;
     width: 28%;
   }
-  #deleteCustomer{
-    margin-top: 20%;
+
+  #saveChanges {
+    float: none;
+  }
+
+  #deleteCustomer {
+    float: none;
     position: relative;
+    margin-top: 40%;
+  }
+  #cancel{
+    float: none;
+    position: relative;
+    margin-top: 20%;
+  }
+  #submit{
+    float: none;
   }
 }
