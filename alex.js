@@ -62,7 +62,6 @@ $(document).ready(function() {
       })
       .done(function(data) {
         $("#companyName").text(data.companyName);
-        // TODO: Make it so the email prints out into the H2 tag.
         $("#phone").text(data.phoneNumber);
         $("#companyEmail").text(data.email);
         $("#firstName").text(data.firstName);
