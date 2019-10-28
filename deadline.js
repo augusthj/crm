@@ -16,7 +16,7 @@ $(document).ready(function() {
           $(".events")              
             .append(
                 "<tr>" +
-                "<td>" + day + ":" + month + ":" + year + "</td>" +
+                "<td>" + day + "/" + month + "/" + year + "</td>" +
                 "<td>" + hour + ":" + minute + "</td>" +
                 "<td>" + value.companyName + "</td>" +
                 "<td>" + value.description + "</td>" +
