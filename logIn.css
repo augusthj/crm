@@ -55,7 +55,7 @@ body{
     color: #3f5fa5;
     font-size: 12px;
 }
-a{
+button{
     background: transparent;
     border: none;
     outline: none;
@@ -67,7 +67,7 @@ a{
     text-decoration: none;
     width: 100%;
 }
-#link_costumers:hover{
+#submit:hover{
     cursor: pointer;
     background: #233458;
 }
