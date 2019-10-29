@@ -40,7 +40,7 @@ $(document).ready(function() {
         data: {
           companyName: $("#company_name").val(),
           email: $("#email").val(),
-          phoneNumber: $("#phone").val(),
+          phoneNumber: $("#phone_number").val(),
           firstName: $("#contact_first_name").val(),
           lastName: $("#contact_last_name").val()
         }
