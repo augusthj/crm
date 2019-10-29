@@ -149,6 +149,17 @@ button:hover {
 .modal-buttons {
   margin-top: 5%;
 }
+.modalInputs {
+  width: 30%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
 
 .close {
   color: #ff1a1a;
@@ -186,9 +197,11 @@ button:hover {
     height: auto;
     width: 45%;
   }
-  .company-content > div{
+
+  .company-content>div {
     margin-top: 5%;
   }
+
   .editCompany-content {
     height: auto;
     width: 28%;
@@ -203,12 +216,14 @@ button:hover {
     position: relative;
     margin-top: 40%;
   }
-  #cancel{
+
+  #cancel {
     float: none;
     position: relative;
     margin-top: 35%;
   }
-  #submit{
+
+  #submit {
     float: none;
   }
 }
