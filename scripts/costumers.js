@@ -7,10 +7,17 @@ $(document).ready(function() {
       $.each(data, function(key, value) {
         $(".cards")
           .append(
-            "<div class='card'>" + "<img class='card_style' src='" + value.avatar +
-            "' alt='Avatar' style='width:100%'>" +
-            "<div class='container'>" + "<h4>" + "<b>" + value.companyName + "</b>" + "</h4>" +
-            "<button class='companyCard' id='" + value.id + "'>More</button>" + "</div>" + "</div>"
+            "<div class='card'>" + 
+              "<img class='card_style' src='" + value.avatar + "' alt='Avatar' style='width:100%'>" +
+              "<div>" + 
+                "<h4>" + 
+                  value.companyName + 
+                "</h4>" + 
+              "</div>" +
+              "<div>" +
+                "<button class='companyCard' id='" + value.id + "'>More</button>" + 
+              "</div>" +
+            "</div>"
           );
       });
     });
