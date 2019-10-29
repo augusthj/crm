@@ -8,7 +8,7 @@ $(document).ready(function() {
         $(".cards")
           .append(
             "<div class='card'>" + 
-              "<img class='card_style' src='" + value.avatar + "' alt='Avatar' style='width:100%'>" +
+              "<img src='" + value.avatar + "' alt='Avatar'>" +
               "<div>" + 
                 "<h4>" + 
                   value.companyName + 
