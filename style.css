@@ -129,7 +129,7 @@ button:hover {
 
 .company-content {
   height: 40%;
-  width: 30%;
+  width: 35%;
 }
 
 .editCompany-content {
@@ -150,11 +150,9 @@ button:hover {
   margin-top: 5%;
 }
 .modalInputs {
-  width: 30%;
-  padding: 10px 0;
+  width: 60%;
   font-size: 16px;
   color: #fff;
-  margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
