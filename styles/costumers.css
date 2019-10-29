@@ -1,23 +1,5 @@
-.navbar {
-  display: flex;
-  padding: 0px 10px;
-  border: none;
-  top: 0px;
-  box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
-  background-color: #2E4372;
-  text-align: center;
-}
 
-a {
-  text-decoration: none;
-  color: azure;
-  padding: 20px;
-  margin-top: 10px;
-}
 
-a:hover {
-  color: #233458;
-}
 
 body {
   background-color: #3f5fa5;
@@ -28,22 +10,6 @@ h1, h4 {
   color: azure;
 }
 
-.nav-item {
-  display: flex;
-  width: 80px;
-  flex-direction: column;
-  align-items: center;
-  margin: -15px 5px;
-}
-
-.push {
-  margin-left: auto;
-}
-
-.icon {
-  height: 40px;
-  width: 40px;
-}
 
 .add_btn {
   border-radius: 10px;
