@@ -130,8 +130,8 @@ button:hover {
 }
 
 .company-content {
-  height: 70%;
-  width: 20%;
+  height: 40%;
+  width: 30%;
 }
 
 .editCompany-content {
@@ -186,7 +186,7 @@ button:hover {
 
   .company-content {
     height: auto;
-    width: 35%;
+    width: 45%;
   }
   .company-content > div{
     margin-top: 5%;
@@ -208,7 +208,7 @@ button:hover {
   #cancel{
     float: none;
     position: relative;
-    margin-top: 20%;
+    margin-top: 35%;
   }
   #submit{
     float: none;
