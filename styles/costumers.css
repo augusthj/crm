@@ -1,23 +1,5 @@
-.navbar {
-  display: flex;
-  padding: 0px 10px;
-  border: none;
-  top: 0px;
-  box-shadow: 0 15px 25px rgba(3, 3, 3, 0.5);
-  background-color: #2E4372;
-  text-align: center;
-}
 
-a {
-  text-decoration: none;
-  color: azure;
-  padding: 20px;
-  margin-top: 10px;
-}
 
-a:hover {
-  color: #233458;
-}
 
 body {
   background-color: #3f5fa5;
@@ -28,22 +10,6 @@ h1, h4 {
   color: azure;
 }
 
-.nav-item {
-  display: flex;
-  width: 80px;
-  flex-direction: column;
-  align-items: center;
-  margin: -15px 5px;
-}
-
-.push {
-  margin-left: auto;
-}
-
-.icon {
-  height: 40px;
-  width: 40px;
-}
 
 .add_btn {
   border-radius: 10px;
@@ -88,11 +54,16 @@ input {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 140px;
   height: 250px;
-  margin-top: 40px;
+  margin: 5px auto;
   padding: 25px;
   border-radius: 10px;
   background-color: #233458;
@@ -102,9 +73,7 @@ input {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }
 
-.container {
-  padding: 2px 16px;
-}
+
 
 .cards {
   display: grid;
@@ -113,10 +82,6 @@ input {
   text-align: center;
 }
 
-.card_style {
-  margin-top: 25px;
-  height: 100px;
-}
 
 .modal {
   display: none;
@@ -213,7 +178,24 @@ input {
   display: none;
 }
 
-@media only screen and (max-width: 375px) {
+
+@media screen and (max-width: 900px) {
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+}
+
+@media only screen and (max-width: 430px) {
   .navbar {
     width: 95%;
     flex: none;
@@ -221,18 +203,6 @@ input {
 
   span {
     display: none;
-  }
-
-  .nav-item {
-    flex: none;
-    text-align: center;
-    width: 10%;
-  }
-
-  .icon {
-    padding: 10px;
-    height: 60px;
-    width: 60px;
   }
 
   h1 {
@@ -254,6 +224,10 @@ input {
     width: 60%;
     height: 220px;
     margin-left: 5px;
+  }
+
+  .card > img {
+    width: 90px;
   }
 
   input {
