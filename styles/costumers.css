@@ -205,18 +205,6 @@ input {
     display: none;
   }
 
-  .nav-item {
-    flex: none;
-    text-align: center;
-    width: 10%;
-  }
-
-  .icon {
-    padding: 10px;
-    height: 60px;
-    width: 60px;
-  }
-
   h1 {
     text-align: center;
   }
