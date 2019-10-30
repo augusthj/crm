@@ -100,27 +100,32 @@ $(document).ready(function() {
       return newFormat;
     }
 
-    $.ajax({
-      method: "GET",
-      url: "http://5da7897d23fa740014697829.mockapi.io/comment/" + idOfHisButton,
-    })
-    .done(function(data) {
-      $(".history-content").append(
-        "<div>"+
-          "<span>" +
-            parseDate(data.date) +
-          "</span>" +
-          "<span>" +
-            data.comment +
-          "</span>" +
-          "<span>" +
-            data.name +
-          "</span>" +
-        "</div>"
-      )
+    
+    /* Get four comments from MockAPI. Mixed by bug */
+    for(let i = 0; i < 4; i++) {
+      console.log("i es: " + i);
+      $.ajax({
+        method: "GET",
+        url: "http://5da7897d23fa740014697829.mockapi.io/comment/" + (idOfHisButton + i),
+      })
+      .done(function(data) {
+        $(".history-content").append(
+          "<div>"+
+            "<span>" +
+              parseDate(data.date) +
+            "</span>" +
+            "<span>" +
+              data.comment +
+            "</span>" +
+            "<span>" +
+              data.name +
+            "</span>" +
+          "</div>"
+        )
+        console.log(idOfHisButton + " " + i + "=" + (idOfHisButton + i) );
+      });
       history.attr("style", "display:block");
-      console.log(data.comment);
-    });
+    }
 
   });
 
