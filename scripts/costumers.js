@@ -15,7 +15,8 @@ $(document).ready(function() {
                 "</h4>" + 
               "</div>" +
               "<div>" +
-                "<button class='companyCard' id='" + value.id + "'>More</button>" + 
+                "<button class='companyCard' id='" + value.id + "'>More</button>" +
+                "<button class='historyButton' id='" + value.id + "'>History</button>" +
               "</div>" +
             "</div>"
           );
@@ -24,6 +25,7 @@ $(document).ready(function() {
   let newCompanyModal = $("#newCompany");
   let companyModal = $("#company");
   let editCompanyModal = $("#editCompanyModal");
+  let history = $("#history");
 
   $("#addCompany").click(function() {
     newCompanyModal.attr("style", "display:block");
@@ -38,6 +40,7 @@ $(document).ready(function() {
     newCompanyModal.attr("style", "display:none");
     companyModal.attr("style", "display:none");
     editCompanyModal.attr("style", "display:none");
+    history.attr("style", "display:none");
   });
 
   $("#submit").click(function() {
@@ -83,6 +86,44 @@ $(document).ready(function() {
         companyModal.attr("style", "display:block");
       });
   });
+
+  
+  /********* Aqui estoy ******/
+
+  $(".cards").on("click", ".historyButton", function(event) {
+    let idOfHisButton = Number(event.target.id);
+    console.log("Clicked!: " + idOfHisButton);
+
+    function parseDate(d) {
+      let date = new Date(d);
+      let newFormat = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+      return newFormat;
+    }
+
+    $.ajax({
+      method: "GET",
+      url: "http://5da7897d23fa740014697829.mockapi.io/comment/" + idOfHisButton,
+    })
+    .done(function(data) {
+      $(".history-content").append(
+        "<div>"+
+          "<span>" +
+            parseDate(data.date) +
+          "</span>" +
+          "<span>" +
+            data.comment +
+          "</span>" +
+          "<span>" +
+            data.name +
+          "</span>" +
+        "</div>"
+      )
+      history.attr("style", "display:block");
+      console.log(data.comment);
+    });
+
+  });
+
   $("#deleteCustomer").click(function() {
     $.ajax({
         method: "DELETE",
