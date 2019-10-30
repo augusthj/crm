@@ -109,7 +109,7 @@ $(document).ready(function() {
       })
       .done(function(data) {
         $(".history-content").append(
-          "<div>"+
+          "<div id='comment-container'>"+
             "<span>" +
               parseDate(data.date) +
             "</span>" +

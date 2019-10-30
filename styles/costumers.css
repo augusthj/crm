@@ -183,6 +183,18 @@ input {
   display: none;
 }
 
+/*** History - Comments ***/
+#comment-container {             /*cambiar*/
+  padding: 8px;
+  margin: 5px 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px #03030380;
+  background-color: #3f5fa5;
+
+  display: flex;
+  justify-content: space-between;
+}
+
 
 @media screen and (max-width: 900px) {
   .cards {
