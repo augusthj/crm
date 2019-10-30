@@ -91,18 +91,17 @@ $(document).ready(function() {
   /********* Aqui estoy ******/
 
   $(".cards").on("click", ".historyButton", function(event) {
+
+    $(".history-content").empty();
+
     let idOfHisButton = Number(event.target.id);
     console.log("Clicked!: " + idOfHisButton);
 
-    function parseDate(d) {
-      let date = new Date(d);
-      let newFormat = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
-      return newFormat;
-    }
-
+    // Random to get from 2 to 8 comments
+    let random = Math.floor(Math.random() * 8) + 2;
     
-    /* Get four comments from MockAPI. Mixed by bug */
-    for(let i = 0; i < 4; i++) {
+    // Get four comments from MockAPI. Mixed by Async-bug
+    for(let i = 0; i < random; i++) {
       console.log("i es: " + i);
       $.ajax({
         method: "GET",
@@ -125,6 +124,13 @@ $(document).ready(function() {
         console.log(idOfHisButton + " " + i + "=" + (idOfHisButton + i) );
       });
       history.attr("style", "display:block");
+    }
+
+    // Return MockApi date in format yyyy-mm-dd
+    function parseDate(d) {
+      let date = new Date(d);
+      let newFormat = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+      return newFormat;
     }
 
   });
