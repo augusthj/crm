@@ -222,7 +222,7 @@ input {
 
   .card {
     width: 60%;
-    height: 220px;
+    min-height: 220px;
     margin-left: 5px;
   }
 
