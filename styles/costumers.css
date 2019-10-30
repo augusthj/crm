@@ -119,7 +119,7 @@ input {
   border: 2px solid #004d00;
 }
 
-.newCompany-content, .company-content, .editCompany-content {
+.newCompany-content, .company-content, .editCompany-content, .history-content {
   background-color: #3f5fa5;
   margin: 10% auto;
   padding: 25px;
@@ -141,6 +141,11 @@ input {
 .newCompany-content {
   height: 45%;
   width: 35%;
+}
+
+.history-content {
+  height: 50%;
+  width: 40%;
 }
 
 .modal-label {
