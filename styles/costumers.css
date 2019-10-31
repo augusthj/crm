@@ -247,7 +247,7 @@ input {
     background-color: azure;
   }
 
-  .newCompany-content {
+  .newCompany-content, .editCompany-content {
     height: 55%;
     width: 80%;
   }
@@ -261,28 +261,13 @@ input {
     margin-top: 5%;
   }
 
-  .editCompany-content {
-    height: auto;
-    width: 28%;
-  }
-
-  #saveChanges {
-    float: none;
-  }
-
-  #deleteCustomer {
-    float: none;
-    position: relative;
-    margin-top: 40%;
-  }
-
-  #cancel, #editCompany {
-    float: left;
+  #saveChanges, #submit {
+    float: right;
     margin-top: 8%;
   }
 
-  #submit {
-    float: right;
+  #cancel, #editCompany, #deleteCustomer {
+    float: left;
     margin-top: 8%;
   }
 }
