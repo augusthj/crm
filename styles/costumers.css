@@ -248,7 +248,7 @@ input {
   }
 
   .newCompany-content, .editCompany-content {
-    height: 55%;
+    height: auto;
     width: 80%;
   }
 
@@ -269,5 +269,12 @@ input {
   #cancel, #editCompany, #deleteCustomer {
     float: left;
     margin-top: 8%;
+  }
+  .modalInputs, .modal-label{
+    display: flex;
+    justify-content: center;
+  }
+  .modalInputs{
+    width: 100%;
   }
 }
