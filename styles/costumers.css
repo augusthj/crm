@@ -27,6 +27,12 @@ button {
   height: 30px;
 }
 
+.card button {
+  margin: 5px;
+  padding: 5px 5px;
+  height: auto;
+}
+
 .center {
   text-align: center;
 }
@@ -79,6 +85,9 @@ input {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }
 
+.card h4 {
+  margin: 10px 0px;
+}
 
 
 .cards {
@@ -296,6 +305,7 @@ input {
     width: 60%;
     min-height: 220px;
     margin-left: 5px;
+    padding-bottom: 10px;
   }
 
   .card > img {
@@ -355,6 +365,14 @@ input {
 
   #submit {
     float: none;
+  }
+
+  .card button {
+    margin: 5px;
+    padding: 5px 5px;
+    height: auto;
+    width: 95%;
+    border-radius: 5px;
   }
 
   /*** History - Comments ***/
