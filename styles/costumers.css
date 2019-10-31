@@ -247,8 +247,8 @@ input {
   }
 
   .newCompany-content {
-    height: auto;
-    width: 28%;
+    height: 55%;
+    width: 80%;
   }
 
   .company-content {
@@ -276,12 +276,12 @@ input {
   }
 
   #cancel {
-    float: none;
-    position: relative;
-    margin-top: 35%;
+    float: left;
+    margin-top: 8%;
   }
 
   #submit {
-    float: none;
+    float: right;
+    margin-top: 8%;
   }
 }
