@@ -48,6 +48,9 @@
     height: 40px;
     width: 40px;
  }
+ .logo {
+  width: 55px;
+}
  .nav-item {
     display: flex;
     flex-direction: column;   
