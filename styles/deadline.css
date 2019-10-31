@@ -6,31 +6,31 @@
 }
 .modal-header {
     background-color: #2E4372;
-    color: white;
+    color: azure;
     border-radius: 5px !important; 
   }
   .modal-body {
     background-color: #2E4372;
-    color: white;
+    color: azure;
     border-radius: 5px !important; 
   }
   .modal-footer {
     background-color: #2E4372;
-    color: white;
+    color: azure;
     border-radius: 5px !important; 
   }
   .events{
-    color: white;
+    color: azure;
   }
   body {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     font-family: 'Zilla Slab';
   }
   .bg-primary{
-    background-color: #2E4372;
+    background-color: #3f5fa5;
   }
   .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: rgb(41, 61, 102);
+    background-color: #35518d;
  }
   .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #192746;
@@ -39,9 +39,12 @@
     display: flex;
     padding: 0px 10px;
     border: none;
-    top: 10px;
+    top: 8px;
+    position: absolute;
+    right: 10px;
+    left: 9px;
     box-shadow: 0 15px 25px #03030380;
-    background-color: #2f4880;
+    background-color: #2E4372;
     font-family: "Zilla Slab", serif;
  }
  .icon {
@@ -49,18 +52,35 @@
     width: 40px;
  }
  .logo {
-  width: 55px;
+   width: 55px;
 }
- .nav-item {
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    width: 80px;
-    margin: 2px 10px;
-    border: 1px solid #2f4880;
-    text-decoration: none;
-    color: white;
- }
+.text{
+  font-size: 16px;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  margin: 2px 26px;
+  border: 1px solid #2E4372;
+  text-decoration: none;
+  color: azure;
+}
+.nav-item:hover {
+  border: 1px solid #7887AB;
+}    
+a:hover{
+  color: #233458;
+}
+
+a{
+  text-decoration: none;
+   color: azure;
+   margin-left: 10px;
+   margin-top: 10px;
+}
  .push {
     margin-left: auto;
  }
@@ -68,12 +88,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 50px;
+    margin-top: 100px;
     flex-wrap: wrap;
+    
  }
  @media screen and (max-width: 960px) {
 
  .container {
-     margin-top: 30px;
+     margin-top: 80px;
   }
 }
