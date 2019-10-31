@@ -91,9 +91,10 @@ $(document).ready(function() {
   /********* History - Comments MockApi ******/
 
   let qtyComments = [];
-  for (let i=0; i<=60; i++) {
-    // Random to get from 2 to 8 comments for each costumer
-    qtyComments.push(Math.floor(Math.random() * 8) + 2);
+  // 100, because qty users could increase.
+  for (let i=0; i<=100; i++) {
+    // Random to get from 2 to 15 comments for each costumer
+    qtyComments.push(Math.floor(Math.random() * 15) + 2);
   }
 
   $(".cards").on("click", ".historyButton", function(event) {
@@ -112,13 +113,13 @@ $(document).ready(function() {
       .done(function(data) {
         $(".history-content").append(
           "<div id='comment-container'>"+
-            "<span>" +
+            "<span class='h-span-date left'>" +
               parseDate(data.date) +
             "</span>" +
-            "<span>" +
+            "<span class='h-span-comment left'>" +
               data.comment +
             "</span>" +
-            "<span>" +
+            "<span class='h-span-contact center'>" +
               data.name +
             "</span>" +
           "</div>"

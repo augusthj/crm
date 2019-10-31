@@ -30,6 +30,9 @@ button {
 .center {
   text-align: center;
 }
+.left {
+  text-align: left;
+}
 
 .search {
   border-radius: 10px;
@@ -147,8 +150,8 @@ input {
 }
 
 .history-container {
-  height: 50%;
-  width: 40%;
+  max-height: 400px;
+  max-width: 600px;
 }
 
 .modal-label {
@@ -208,6 +211,16 @@ input {
   padding: 5px 10px;
   margin: 5px 3px;
   color: #162956;
+}
+
+.h-span-date {
+  width: 85px;
+}
+.h-span-comment {
+  width: 300px;
+}
+.h-span-contact {
+  width: 160px;
 }
 
 
