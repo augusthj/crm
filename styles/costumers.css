@@ -253,7 +253,7 @@ input {
 
   .company-content {
     height: auto;
-    width: 45%;
+    width: 80%;
   }
 
   .company-content>div {
@@ -275,7 +275,7 @@ input {
     margin-top: 40%;
   }
 
-  #cancel {
+  #cancel, #editCompany {
     float: left;
     margin-top: 8%;
   }
