@@ -377,6 +377,7 @@ input {
 
   /*** History - Comments ***/
   .history-container {
+    padding: 20px 10px;
     max-width: 250px;
   }
 
@@ -386,7 +387,7 @@ input {
   .h-span-comment {
     text-align: center;
     font-weight: bold;
-    width: 270px;
+    width: 230px;
   }
   .h-span-contact {
     font-style: italic;
