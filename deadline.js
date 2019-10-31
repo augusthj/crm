@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
     $.ajax({
         method: "GET",
@@ -9,10 +8,10 @@ $(document).ready(function() {
         $.each(data, function(key, value) {
           let date = new Date(value.date);
           let year = date.getFullYear();
-          let month = date.getMonth();
-          let day = date.getDay();
-          let hour = date.getHours();
-          let minute = date.getMinutes();
+          let month = (date.getMonth()+1);
+          let day = date.getDate();
+          let hour = ('0'  + date.getUTCHours()).slice(-2);
+          let minute = ('0'  + date.getMinutes()).slice(-2);
           $(".events")              
             .append(
                 "<tr>" +
@@ -28,10 +27,10 @@ $(document).ready(function() {
         $.each(data, function(key, value) {
           let date = new Date(value.date);
           let year = date.getFullYear();
-          let month = date.getMonth();
-          let day = date.getDay();
-          let hour = date.getHours();
-          let minute = date.getMinutes();
+          let month = (date.getMonth()+1);
+          let day = date.getDate();
+          let hour = ('0'  + date.getUTCHours()).slice(-2);
+          let minute = ('0'  + date.getMinutes()).slice(-2);
             if(number < 2){
             $(".modal-body")             
               .append(
