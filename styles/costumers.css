@@ -187,15 +187,27 @@ input {
 }
 
 /*** History - Comments ***/
-#comment-container {             /*cambiar*/
-  padding: 8px;
-  margin: 5px 10px 0px 10px;
-  border-radius: 10px;
-  box-shadow: 0 15px 25px #03030380;
-  background-color: #3f5fa5;
 
+#comment-header {
   display: flex;
   justify-content: space-between;
+
+  padding: 8px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px #03030380;
+  background-color: #3f5fa5;
+}
+
+#comment-container {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: azure;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 5px 3px;
+  color: #162956;
 }
 
 

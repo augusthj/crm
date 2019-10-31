@@ -92,12 +92,11 @@ $(document).ready(function() {
 
   let qtyComments = [];
   for (let i=0; i<=60; i++) {
-    // Random to get from 2 to 8 comments
+    // Random to get from 2 to 8 comments for each costumer
     qtyComments.push(Math.floor(Math.random() * 8) + 2);
   }
 
   $(".cards").on("click", ".historyButton", function(event) {
-
     $(".history-content").empty();
 
     let idOfHisButton = Number(event.target.id);
