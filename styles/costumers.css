@@ -205,6 +205,7 @@ input {
 #comment-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   background-color: azure;
   border-radius: 2px;
@@ -231,12 +232,39 @@ input {
     grid-template-columns: auto auto auto;
   }
 
+  .history-container {
+    max-width: 550px;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
   .cards {
     display: grid;
     grid-template-columns: auto auto;
+  }
+
+  /*** History - Comments ***/
+  .history-container {
+    max-width: 330px;
+  }
+  #comment-header {
+    display: none;
+  }
+  #comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .h-span-date {
+    text-align: center;
+  }
+  .h-span-comment {
+    text-align: center;
+    font-weight: bold;
+  }
+  .h-span-contact {
+    font-style: italic;
   }
 
 }
