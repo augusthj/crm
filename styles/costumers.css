@@ -262,6 +262,8 @@ input {
   .h-span-comment {
     text-align: center;
     font-weight: bold;
+    width: 290px;
+
   }
   .h-span-contact {
     font-style: italic;
@@ -273,10 +275,6 @@ input {
   .navbar {
     width: 95%;
     flex: none;
-  }
-
-  span {
-    display: none;
   }
 
   h1 {
@@ -357,5 +355,22 @@ input {
 
   #submit {
     float: none;
+  }
+
+  /*** History - Comments ***/
+  .history-container {
+    max-width: 250px;
+  }
+
+  .h-span-date {
+    text-align: center;
+  }
+  .h-span-comment {
+    text-align: center;
+    font-weight: bold;
+    width: 270px;
+  }
+  .h-span-contact {
+    font-style: italic;
   }
 }
