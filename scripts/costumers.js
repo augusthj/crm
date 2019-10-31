@@ -77,8 +77,11 @@ $(document).ready(function() {
 
         $("#companyModalButtons").
         append("<button class='mailLinkContainer'>" +
-          "<a class='mailLink' target='_blank' href='mailto:someone@yoursite.com?" +
-          "subject=We%20want%20your%20opinion!&body=This%20is%20just%20a%20test.'>" +
+          "<a class='mailLink' target='_blank' href='mailto:" + data.email + "?" +
+          "subject=We%20would%20love%20to%20hear%20your%20feedback,%20" + data.firstName + "%20" + data.lastName + "!&" +
+          "body=How%20did%20you%20enjoy%20our%20services?%0D%0A%0D%0A"+
+          "Can%20we%20improve%20our%20services%20somehow?%0D%0A%0D%0A"+
+          "Would%20you%20recommend%20us%20to%20others?%0D%0A%0D%0A'>" +
           "Send a survey</a></button>");
         //Load data into editCompanyModal inputs.
         $("#nameForCompany").val(data.companyName);
