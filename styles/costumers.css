@@ -178,6 +178,13 @@ input {
   display: none;
 }
 
+.mailLink{
+  text-decoration: underline;
+  margin-left: 0px;
+}
+.mailLinkContainer{
+  float: right;
+}
 
 @media screen and (max-width: 900px) {
   .cards {
