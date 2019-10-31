@@ -10,7 +10,6 @@ h1, h4 {
   color: azure;
 }
 
-
 .add_btn {
   border-radius: 10px;
   border: 2px solid #0044cc;
@@ -26,6 +25,10 @@ button {
   font-size: 15px;
   color: azure;
   height: 30px;
+}
+
+.center {
+  text-align: center;
 }
 
 .search {
@@ -119,7 +122,7 @@ input {
   border: 2px solid #004d00;
 }
 
-.newCompany-content, .company-content, .editCompany-content, .history-content {
+.newCompany-content, .company-content, .editCompany-content, .history-container {
   background-color: #3f5fa5;
   margin: 10% auto;
   padding: 25px;
@@ -143,7 +146,7 @@ input {
   width: 35%;
 }
 
-.history-content {
+.history-container {
   height: 50%;
   width: 40%;
 }
@@ -194,6 +197,7 @@ input {
   display: flex;
   justify-content: space-between;
 }
+
 
 
 @media screen and (max-width: 900px) {
