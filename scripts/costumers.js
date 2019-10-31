@@ -7,16 +7,16 @@ $(document).ready(function() {
       $.each(data, function(key, value) {
         $(".cards")
           .append(
-            "<div class='card'>" + 
-              "<img src='" + value.avatar + "' alt='Avatar'>" +
-              "<div>" + 
-                "<h4>" + 
-                  value.companyName + 
-                "</h4>" + 
-              "</div>" +
-              "<div>" +
-                "<button class='companyCard' id='" + value.id + "'>More</button>" + 
-              "</div>" +
+            "<div class='card'>" +
+            "<img src='" + value.avatar + "' alt='Avatar'>" +
+            "<div>" +
+            "<h4>" +
+            value.companyName +
+            "</h4>" +
+            "</div>" +
+            "<div>" +
+            "<button class='companyCard' id='" + value.id + "'>More</button>" +
+            "</div>" +
             "</div>"
           );
       });
@@ -52,8 +52,7 @@ $(document).ready(function() {
           lastName: $("#contact_last_name").val()
         }
       })
-      .done(function() {
-      });
+      .done(function() {});
     $(".newCompany-content :input").val("");
     newCompanyModal.attr("style", "display:none");
   });
@@ -68,13 +67,20 @@ $(document).ready(function() {
         url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + idOfButton,
       })
       .done(function(data) {
+        //Load data into companyModal.
         $("#companyName").text(data.companyName);
         $("#phone").text(data.phoneNumber);
         $("#companyEmail").text(data.email);
         $("#firstName").text(data.firstName);
         $("#lastName").text(data.lastName);
         $("#companyId").text(data.id);
-        //For the edit modal
+
+        $("#companyModalButtons").
+        append("<button class='mailLinkContainer'>" +
+          "<a class='mailLink' target='_blank' href='mailto:someone@yoursite.com?" +
+          "subject=We%20want%20your%20opinion!&body=This%20is%20just%20a%20test.'>" +
+          "Send a survey</a></button>");
+        //Load data into editCompanyModal inputs.
         $("#nameForCompany").val(data.companyName);
         $("#emailForCompany").val(data.email);
         $("#phoneNumber").val(data.phoneNumber);
