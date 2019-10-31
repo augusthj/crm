@@ -88,7 +88,13 @@ $(document).ready(function() {
   });
 
   
-  /********* Aqui estoy ******/
+  /********* History - Comments MockApi ******/
+
+  let qtyComments = [];
+  for (let i=0; i<=60; i++) {
+    // Random to get from 2 to 8 comments
+    qtyComments.push(Math.floor(Math.random() * 8) + 2);
+  }
 
   $(".cards").on("click", ".historyButton", function(event) {
 
@@ -96,12 +102,9 @@ $(document).ready(function() {
 
     let idOfHisButton = Number(event.target.id);
     console.log("Clicked!: " + idOfHisButton);
-
-    // Random to get from 2 to 8 comments
-    let random = Math.floor(Math.random() * 8) + 2;
     
     // Get four comments from MockAPI. Mixed by Async-bug
-    for(let i = 0; i < random; i++) {
+    for(let i = 0; i < qtyComments[idOfHisButton]; i++) {
       console.log("i es: " + i);
       $.ajax({
         method: "GET",
