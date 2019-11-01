@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
    loadEventsOnCalendar();
 
    // Set addListener to all buttons
-   for (let i = 1; i <= 31; i++) {
+   for (let i = 1; i <= 30; i++) {
       let tempElement = document.getElementById("day" + i);
       tempElement.addEventListener("click", showEvent);
    }
@@ -29,12 +29,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                let tempDate = new Date(iterator.date);
 
                // Filter. Look after events for October (months index 0-11) 2019
-               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9") {
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "10") {
 
                   // Add class "event-day" to days on calendar.
                   let fakeElement = eval("day" + tempDate.getDate());
-                  console.log(iterator.date);
-                  console.log(tempDate);
                   fakeElement.classList.add("event-day");
                }
             }
@@ -63,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                let tempDate = new Date(iterator.date);
 
                // Filter for 2019 - October - day clicked
-               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9" && tempDate.getDate() == clicked) {
-                  console.log(iterator.description);
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "10" && tempDate.getDate() == clicked) {
                   newEvent = document.createElement("p");
                   newEvent.innerHTML = iterator.description;
                   newEvent.classList.add("event");
@@ -76,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
    // Show day and month as subtitle when clicking a day on calendar
    function showDayMonth(day) {
-      dayMonth.innerHTML = "October " + day;
+      dayMonth.innerHTML = "November " + day;
    }
 
    // Clear an element from child elements
@@ -87,46 +84,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
 })
-
-
-
-
-
-
-
-
-
-
-
-/*
-$.ajax({
-   method: "POST",
-   url: "https://5da7897d23fa740014697829.mockapi.io/events",
-   data: { date: "2020-04-26", description: "Do something else" }
- })
-   .done(function( msg ) {
-      console.log(msg)
-     //alert( "Data Saved: " + msg );
-   });
-
-
-getMonthMockapiEvents();
-
-function getMonthMockapiEvents() {
-
-   let allEvents;
-
-   $.ajax({
-      method: "GET",
-      url: "https://5da7897d23fa740014697829.mockapi.io/events",
-   })
-      .done(function (msg) {
-         allEvents = msg;
-         console.log(allEvents);
-      });
-
-
-
-}
-*/
-
