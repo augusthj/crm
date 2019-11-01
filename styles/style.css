@@ -49,13 +49,8 @@ a{
    justify-content: center;
    width: 80px;
    margin: 2px 25px;
-   border: 1px solid #2E4372;
    text-decoration: none;
    color: azure;
-}
-
-.nav-item:hover {
-   border: 1px solid #7887AB;
 }
 
 .push-right {
