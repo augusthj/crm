@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                   // Add class "event-day" to days on calendar.
                   let fakeElement = eval("day" + tempDate.getDate());
-                  console.log(iterator.date);
-                  console.log(tempDate);
                   fakeElement.classList.add("event-day");
                }
             }
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                // Filter for 2019 - October - day clicked
                if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "10" && tempDate.getDate() == clicked) {
-                  console.log(iterator.description);
                   newEvent = document.createElement("p");
                   newEvent.innerHTML = iterator.description;
                   newEvent.classList.add("event");

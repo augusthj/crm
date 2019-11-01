@@ -117,11 +117,8 @@ $(document).ready(function() {
     $(".history-content").empty();
 
     let idOfHisButton = Number(event.target.id);
-    console.log("Clicked!: " + idOfHisButton);
-
     // Get four comments from MockAPI. Mixed by Async-bug
     for(let i = 0; i < qtyComments[idOfHisButton]; i++) {
-      console.log("i es: " + i);
       $.ajax({
         method: "GET",
         url: "http://5da7897d23fa740014697829.mockapi.io/comment/" + (idOfHisButton + i),
@@ -140,7 +137,6 @@ $(document).ready(function() {
             "</span>" +
           "</div>"
         )
-        console.log(idOfHisButton + " " + i + "=" + (idOfHisButton + i) );
       });
       history.attr("style", "display:block");
     }
