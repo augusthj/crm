@@ -15,7 +15,7 @@ body {
    border: none;
    top: 0px;
    box-shadow: 0 15px 25px #03030380;
-   background-color: #2E4372;
+   background-color: #061539;
    font-family: "Zilla Slab", serif;
 }
 .logo:hover {
@@ -44,7 +44,7 @@ a{
 
 .nav-item {
    display: flex;
-   flex-direction: column;   
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    width: 80px;
@@ -75,7 +75,7 @@ a{
    }
 
    .push-right { margin-left: auto; }
-   
+
 }
 
 
@@ -101,4 +101,3 @@ a{
 
    .push-right { margin-left: auto; }
 }
-
