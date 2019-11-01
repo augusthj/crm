@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                let tempDate = new Date(iterator.date);
 
                // Filter. Look after events for October (months index 0-11) 2019
-               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9") {
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "10") {
 
                   // Add class "event-day" to days on calendar.
                   let fakeElement = eval("day" + tempDate.getDate());
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                let tempDate = new Date(iterator.date);
 
                // Filter for 2019 - October - day clicked
-               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "9" && tempDate.getDate() == clicked) {
+               if (tempDate.getFullYear() == "2019" && tempDate.getMonth() == "10" && tempDate.getDate() == clicked) {
                   console.log(iterator.description);
                   newEvent = document.createElement("p");
                   newEvent.innerHTML = iterator.description;
