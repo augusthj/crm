@@ -7,12 +7,12 @@ $(document).ready(function() {
       $.each(data, function(key, value) {
         $(".cards")
           .append(
-            "<div class='card'>" + 
+            "<div class='card'>" +
               "<img src='" + value.avatar + "' alt='Avatar'>" +
-              "<div>" + 
-                "<h4>" + 
-                  value.companyName + 
-                "</h4>" + 
+              "<div>" +
+                "<h4>" +
+                  value.companyName +
+                "</h4>" +
               "</div>" +
               "<div>" +
                 "<button class='companyCard' id='" + value.id + "'>More</button>" +
@@ -55,8 +55,7 @@ $(document).ready(function() {
           lastName: $("#contact_last_name").val()
         }
       })
-      .done(function() {
-      });
+      .done(function() {});
     $(".newCompany-content :input").val("");
     newCompanyModal.attr("style", "display:none");
   });
@@ -71,13 +70,30 @@ $(document).ready(function() {
         url: "http://5da7897d23fa740014697829.mockapi.io/customer/" + idOfButton,
       })
       .done(function(data) {
+        //Load data into companyModal.
+        let mailLink = "<button class='mailLinkContainer'>" +
+        "<a class='mailLink' target='_blank' href='mailto:" + data.email + "?" +
+        "subject=We%20would%20love%20to%20hear%20your%20feedback,%20" + data.firstName + "%20" + data.lastName + "!&" +
+        "body=How%20did%20you%20enjoy%20our%20services?%0D%0A%0D%0A"+
+        "Can%20we%20improve%20our%20services%20somehow?%0D%0A%0D%0A"+
+        "Would%20you%20recommend%20us%20to%20others?%0D%0A%0D%0A'>" +
+        "Send a survey</a></button>";
+
         $("#companyName").text(data.companyName);
         $("#phone").text(data.phoneNumber);
         $("#companyEmail").text(data.email);
         $("#firstName").text(data.firstName);
         $("#lastName").text(data.lastName);
         $("#companyId").text(data.id);
-        //For the edit modal
+
+        if(document.getElementsByClassName("mailLinkContainer")){
+          $(".mailLinkContainer").remove();
+          $("#companyModalButtons").append(mailLink);
+        }
+        else{
+          $("#companyModalButtons").append(mailLink);
+        }
+        //Load data into editCompanyModal inputs.
         $("#nameForCompany").val(data.companyName);
         $("#emailForCompany").val(data.email);
         $("#phoneNumber").val(data.phoneNumber);
@@ -87,7 +103,7 @@ $(document).ready(function() {
       });
   });
 
-  
+
   /********* History - Comments MockApi ******/
 
   let qtyComments = [];
@@ -102,7 +118,7 @@ $(document).ready(function() {
 
     let idOfHisButton = Number(event.target.id);
     console.log("Clicked!: " + idOfHisButton);
-    
+
     // Get four comments from MockAPI. Mixed by Async-bug
     for(let i = 0; i < qtyComments[idOfHisButton]; i++) {
       console.log("i es: " + i);
