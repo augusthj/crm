@@ -14,35 +14,32 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="customers.html" class="nav-item">
-            <img class="logo" src="images/logo.png">
-            <span>Home</span>
-        </a>
-        <a href="calendar.html" class="nav-item">
-            <img class="icon" src="https://img.icons8.com/nolan/64/000000/planner.png">
-            <span>Calendar</span>
-        </a>
-        <a href="deadline.html" class="nav-item">
-            <img class="icon" src="https://img.icons8.com/nolan/64/000000/appointment-reminders.png">
-            <span>Deadlines</span>
-        </a>
-        <a href="logIn.html" class="nav-item push-right">
-            <img class="icon" src="https://img.icons8.com/nolan/64/000000/exit.png">
-            <span>Log out</span>
-        </a>
+  <div class="navbar">
+    <a href="customers.html" class="nav-item">
+      <img class="logo" src="images/logo.png">
+      <span>Home</span>
+    </a>
+    <a href="calendar.html" class="nav-item">
+      <img class="icon" src="https://img.icons8.com/nolan/64/000000/planner.png">
+      <span>Calendar</span>
+    </a>
+    <a href="deadline.html" class="nav-item">
+      <img class="icon" src="https://img.icons8.com/nolan/64/000000/appointment-reminders.png">
+      <span>Deadlines</span>
+    </a>
+    <a href="logIn.html" class="nav-item push-right">
+      <img class="icon" src="https://img.icons8.com/nolan/64/000000/exit.png">
+      <span>Log out</span>
+    </a>
   </div>
   <h1>
     Customers
   </h1>
-
   <input type="text" name="" id="">
-
-    <button class="search"> Search</button>
-    <br>
-    <br>
-    <button class="add_btn" id="addCompany">Add company</button>
-
+  <button class="search"> Search</button>
+  <br>
+  <br>
+  <button class="add_btn" id="addCompany">Add company</button>
 
   <div id="newCompany" class="modal">
     <div class="newCompany-content">
@@ -82,49 +79,47 @@
     </div>
   </div>
 
-
-    <div id="editCompanyModal" class="modal">
-      <div class="editCompany-content">
-        <div>
-          <span class="close">&times;</span>
-        </div>
-        <div class="hiddenId">
-          <label class="modal-label" for="companyId">Company id: <span id="companyId"></span></label>
-          <br>
-        </div>
-        <div>
-          <label class="modal-label" for="nameForCompany">Enter company name: </label>
-          <br>
-          <input class="modalInputs" id="nameForCompany" type="text" name="nameForCompany" value="">
-        </div>
-        <div>
-          <label class="modal-label" for="emailForCompany">Enter email: </label>
-          <br>
-          <input class="modalInputs" id="emailForCompany" type="email" name="emailForCompany" value="">
-        </div>
-        <div>
-          <label class="modal-label" for="phoneNumber">Enter phone number: </label>
-          <br>
-          <input class="modalInputs" id="phoneNumber" type="text" name="phoneNumber" value="">
-        </div>
-        <div>
-          <label class="modal-label" for="contactFirstName">Enter contacts first name</label>
-          <br>
-          <input class="modalInputs" id="contactFirstName" type="text" name="contactFirstName" value="">
-        </div>
-        <div>
-          <label class="modal-label" for="contactLastName">Enter contacts last name</label>
-          <br>
-          <input class="modalInputs" id="contactLastName" type="text" name="contactLastName" value="">
-        </div>
-        <div class="modal-buttons">
-          <button id="saveChanges" type="button" name="button">Save changes</button>
-          <button id="deleteCustomer" type="button" name="button">Delete customer</button>
-        </div>
+  <div id="editCompanyModal" class="modal">
+    <div class="editCompany-content">
+      <div>
+        <span class="close">&times;</span>
+      </div>
+      <div class="hiddenId">
+        <label class="modal-label" for="companyId">Company id: <span id="companyId"></span></label>
         <br>
+      </div>
+      <div>
+        <label class="modal-label" for="nameForCompany">Enter company name: </label>
+        <br>
+        <input class="modalInputs" id="nameForCompany" type="text" name="nameForCompany" value="">
+      </div>
+      <div>
+        <label class="modal-label" for="emailForCompany">Enter email: </label>
+        <br>
+        <input class="modalInputs" id="emailForCompany" type="email" name="emailForCompany" value="">
+      </div>
+      <div>
+        <label class="modal-label" for="phoneNumber">Enter phone number: </label>
+        <br>
+        <input class="modalInputs" id="phoneNumber" type="text" name="phoneNumber" value="">
+      </div>
+      <div>
+        <label class="modal-label" for="contactFirstName">Enter contacts first name</label>
+        <br>
+        <input class="modalInputs" id="contactFirstName" type="text" name="contactFirstName" value="">
+      </div>
+      <div>
+        <label class="modal-label" for="contactLastName">Enter contacts last name</label>
+        <br>
+        <input class="modalInputs" id="contactLastName" type="text" name="contactLastName" value="">
+      </div>
+      <div class="modal-buttons">
+        <button id="saveChanges" type="button" name="button">Save changes</button>
+        <button id="deleteCustomer" type="button" name="button">Delete customer</button>
       </div>
       <br>
     </div>
+    <br>
   </div>
 
   <div id="company" class="modal">
@@ -159,28 +154,24 @@
     </div>
   </div>
 
-    <div id="history" class="modal">
-      <div class="history-container">
-        <div class="close">&times;</div>
-        <h2 class="center">History</h2>
-        <div id="comment-header">
-          <span class="h-span-date center">Date</span>
-          <span class="h-span-comment center">Comment</span>
-          <span class="h-span-contact center">Contact</span>
-        </div>
-
-        <div class="history-content">
-
-
-
-
-        </div>
+  <div id="history" class="modal">
+    <div class="history-container">
+      <div class="close">&times;</div>
+      <h2 class="center">History</h2>
+      <div id="comment-header">
+        <span class="h-span-date center">Date</span>
+        <span class="h-span-comment center">Comment</span>
+        <span class="h-span-contact center">Contact</span>
       </div>
+      <div class="history-content"></div>
     </div>
-    <div class="cards"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scripts/login.js"></script>
-    <script type="text/javascript" src="scripts/costumers.js"></script>
+  </div>
+
+  <div class="cards"></div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/login.js"></script>
+  <script type="text/javascript" src="scripts/costumers.js"></script>
 </body>
 
 </html>
