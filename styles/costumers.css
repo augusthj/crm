@@ -213,6 +213,7 @@ input {
     margin-left: 25%;
     width: 50%;
     height: 50px;
+    margin-bottom: 10%;
   }
 
   .cards {
@@ -246,42 +247,34 @@ input {
     background-color: azure;
   }
 
-  .newCompany-content {
+  .newCompany-content, .editCompany-content {
     height: auto;
-    width: 28%;
+    width: 80%;
   }
 
   .company-content {
     height: auto;
-    width: 45%;
+    width: 80%;
   }
 
   .company-content>div {
     margin-top: 5%;
   }
 
-  .editCompany-content {
-    height: auto;
-    width: 28%;
+  #saveChanges, #submit {
+    float: right;
+    margin-top: 8%;
   }
 
-  #saveChanges {
-    float: none;
+  #cancel, #editCompany, #deleteCustomer {
+    float: left;
+    margin-top: 8%;
   }
-
-  #deleteCustomer {
-    float: none;
-    position: relative;
-    margin-top: 40%;
+  .modalInputs, .modal-label{
+    display: flex;
+    justify-content: center;
   }
-
-  #cancel {
-    float: none;
-    position: relative;
-    margin-top: 35%;
-  }
-
-  #submit {
-    float: none;
+  .modalInputs{
+    width: 100%;
   }
 }
