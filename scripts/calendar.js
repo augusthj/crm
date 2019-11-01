@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
    loadEventsOnCalendar();
 
    // Set addListener to all buttons
-   for (let i = 1; i <= 31; i++) {
+   for (let i = 1; i <= 30; i++) {
       let tempElement = document.getElementById("day" + i);
       tempElement.addEventListener("click", showEvent);
    }
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
    // Show day and month as subtitle when clicking a day on calendar
    function showDayMonth(day) {
-      dayMonth.innerHTML = "October " + day;
+      dayMonth.innerHTML = "November " + day;
    }
 
    // Clear an element from child elements
@@ -87,46 +87,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
 })
-
-
-
-
-
-
-
-
-
-
-
-/*
-$.ajax({
-   method: "POST",
-   url: "https://5da7897d23fa740014697829.mockapi.io/events",
-   data: { date: "2020-04-26", description: "Do something else" }
- })
-   .done(function( msg ) {
-      console.log(msg)
-     //alert( "Data Saved: " + msg );
-   });
-
-
-getMonthMockapiEvents();
-
-function getMonthMockapiEvents() {
-
-   let allEvents;
-
-   $.ajax({
-      method: "GET",
-      url: "https://5da7897d23fa740014697829.mockapi.io/events",
-   })
-      .done(function (msg) {
-         allEvents = msg;
-         console.log(allEvents);
-      });
-
-
-
-}
-*/
-
