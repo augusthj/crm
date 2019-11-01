@@ -5,19 +5,19 @@
     text-align: center;
 }
 .modal-header {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .modal-body {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .modal-footer {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .events{
     color: azure;
@@ -59,7 +59,7 @@
 }
 .nav-item {
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 80px;
@@ -70,7 +70,7 @@
 }
 .nav-item:hover {
   border: 1px solid #7887AB;
-}    
+}
 a:hover{
   color: #233458;
 }
@@ -90,8 +90,28 @@ a{
     align-items: flex-end;
     margin-top: 100px;
     flex-wrap: wrap;
-    
+
  }
+
+ button:hover {
+   cursor: pointer;
+   background: #233458;
+ }
+
+ button {
+   border-radius: 10px;
+   border: 2px solid #0044cc;
+   background-color: #0044cc;
+   font-size: 15px;
+   color: azure;
+   height: 30px;
+ }
+
+ #close {
+   background-color: #ff1a1a;
+   border: 2px solid #ff1a1a;
+ }
+ 
  @media screen and (max-width: 960px) {
 
  .container {
