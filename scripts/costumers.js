@@ -15,7 +15,8 @@ $(document).ready(function() {
                 "</h4>" + 
               "</div>" +
               "<div>" +
-                "<button class='companyCard' id='" + value.id + "'>More</button>" + 
+                "<button class='companyCard' id='" + value.id + "'>More</button>" +
+                "<button class='historyButton' id='" + value.id + "'>History</button>" +
               "</div>" +
             "</div>"
           );
@@ -24,6 +25,7 @@ $(document).ready(function() {
   let newCompanyModal = $("#newCompany");
   let companyModal = $("#company");
   let editCompanyModal = $("#editCompanyModal");
+  let history = $("#history");
 
   $("#addCompany").click(function() {
     newCompanyModal.attr("style", "display:block");
@@ -38,6 +40,7 @@ $(document).ready(function() {
     newCompanyModal.attr("style", "display:none");
     companyModal.attr("style", "display:none");
     editCompanyModal.attr("style", "display:none");
+    history.attr("style", "display:none");
   });
 
   $("#submit").click(function() {
@@ -83,6 +86,58 @@ $(document).ready(function() {
         companyModal.attr("style", "display:block");
       });
   });
+
+  
+  /********* History - Comments MockApi ******/
+
+  let qtyComments = [];
+  // 100, because qty users could increase.
+  for (let i=0; i<=100; i++) {
+    // Random to get from 2 to 15 comments for each costumer
+    qtyComments.push(Math.floor(Math.random() * 15) + 2);
+  }
+
+  $(".cards").on("click", ".historyButton", function(event) {
+    $(".history-content").empty();
+
+    let idOfHisButton = Number(event.target.id);
+    console.log("Clicked!: " + idOfHisButton);
+    
+    // Get four comments from MockAPI. Mixed by Async-bug
+    for(let i = 0; i < qtyComments[idOfHisButton]; i++) {
+      console.log("i es: " + i);
+      $.ajax({
+        method: "GET",
+        url: "http://5da7897d23fa740014697829.mockapi.io/comment/" + (idOfHisButton + i),
+      })
+      .done(function(data) {
+        $(".history-content").append(
+          "<div id='comment-container'>"+
+            "<span class='h-span-date left'>" +
+              parseDate(data.date) +
+            "</span>" +
+            "<span class='h-span-comment left'>" +
+              data.comment +
+            "</span>" +
+            "<span class='h-span-contact center'>" +
+              data.name +
+            "</span>" +
+          "</div>"
+        )
+        console.log(idOfHisButton + " " + i + "=" + (idOfHisButton + i) );
+      });
+      history.attr("style", "display:block");
+    }
+
+    // Return MockApi date in format yyyy-mm-dd
+    function parseDate(d) {
+      let date = new Date(d);
+      let newFormat = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+      return newFormat;
+    }
+
+  });
+
   $("#deleteCustomer").click(function() {
     $.ajax({
         method: "DELETE",

@@ -10,7 +10,6 @@ h1, h4 {
   color: azure;
 }
 
-
 .add_btn {
   border-radius: 10px;
   border: 2px solid #0044cc;
@@ -26,6 +25,19 @@ button {
   font-size: 15px;
   color: azure;
   height: 30px;
+}
+
+.card button {
+  margin: 5px;
+  padding: 5px 5px;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
 }
 
 .search {
@@ -73,6 +85,9 @@ input {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }
 
+.card h4 {
+  margin: 10px 0px;
+}
 
 
 .cards {
@@ -119,7 +134,7 @@ input {
   border: 2px solid #004d00;
 }
 
-.newCompany-content, .company-content, .editCompany-content {
+.newCompany-content, .company-content, .editCompany-content, .history-container {
   background-color: #3f5fa5;
   margin: 10% auto;
   padding: 25px;
@@ -141,6 +156,11 @@ input {
 .newCompany-content {
   height: 45%;
   width: 35%;
+}
+
+.history-container {
+  max-height: 400px;
+  max-width: 600px;
 }
 
 .modal-label {
@@ -178,11 +198,51 @@ input {
   display: none;
 }
 
+/*** History - Comments ***/
+
+#comment-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px #03030380;
+  background-color: #3f5fa5;
+}
+
+#comment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: azure;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 5px 3px;
+  color: #162956;
+}
+
+.h-span-date {
+  width: 85px;
+}
+.h-span-comment {
+  width: 300px;
+}
+.h-span-contact {
+  width: 160px;
+}
+
+
 
 @media screen and (max-width: 900px) {
   .cards {
     display: grid;
     grid-template-columns: auto auto auto;
+  }
+
+  .history-container {
+    max-width: 550px;
   }
 
 }
@@ -193,16 +253,37 @@ input {
     grid-template-columns: auto auto;
   }
 
+  /*** History - Comments ***/
+  .history-container {
+    max-width: 330px;
+  }
+  #comment-header {
+    display: none;
+  }
+  #comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .h-span-date {
+    text-align: center;
+  }
+  .h-span-comment {
+    text-align: center;
+    font-weight: bold;
+    width: 290px;
+
+  }
+  .h-span-contact {
+    font-style: italic;
+  }
+
 }
 
 @media only screen and (max-width: 430px) {
   .navbar {
     width: 95%;
     flex: none;
-  }
-
-  span {
-    display: none;
   }
 
   h1 {
@@ -223,8 +304,9 @@ input {
 
   .card {
     width: 60%;
-    height: 220px;
+    min-height: 220px;
     margin-left: 5px;
+    padding-bottom: 10px;
   }
 
   .card > img {
@@ -276,5 +358,31 @@ input {
   }
   .modalInputs{
     width: 100%;
+  }
+
+  .card button {
+    margin: 5px;
+    padding: 5px 5px;
+    height: auto;
+    width: 95%;
+    border-radius: 5px;
+  }
+
+  /*** History - Comments ***/
+  .history-container {
+    padding: 20px 10px;
+    max-width: 250px;
+  }
+
+  .h-span-date {
+    text-align: center;
+  }
+  .h-span-comment {
+    text-align: center;
+    font-weight: bold;
+    width: 230px;
+  }
+  .h-span-contact {
+    font-style: italic;
   }
 }
