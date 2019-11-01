@@ -230,11 +230,14 @@ input {
 }
 
 .mailLink{
-  text-decoration: underline;
+  text-decoration: none;
   margin-left: 0px;
 }
 .mailLinkContainer{
   float: right;
+}
+a:visited, a:link{
+  color: azure;
 }
 
 @media screen and (max-width: 900px) {
