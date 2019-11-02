@@ -5,19 +5,19 @@
     text-align: center;
 }
 .modal-header {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .modal-body {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .modal-footer {
-    background-color: #2E4372;
+    background-color: #3f5fa5;
     color: azure;
-    border-radius: 5px !important; 
+    border-radius: 5px !important;
   }
   .events{
     color: azure;
@@ -25,6 +25,7 @@
   body {
     background-color: #3f5fa5;
     font-family: 'Zilla Slab';
+    margin: 8px;
   }
   .bg-primary{
     background-color: #3f5fa5;
@@ -35,63 +36,40 @@
   .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #192746;
   }
-  .navbar {
-    display: flex;
-    padding: 0px 10px;
-    border: none;
-    top: 8px;
-    position: absolute;
-    right: 10px;
-    left: 9px;
-    box-shadow: 0 15px 25px #03030380;
-    background-color: #2E4372;
-    font-family: "Zilla Slab", serif;
- }
- .icon {
-    height: 40px;
-    width: 40px;
- }
- .logo {
-   width: 55px;
-}
+
 .text{
   font-size: 16px;
 }
-.nav-item {
-  display: flex;
-  flex-direction: column;   
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  margin: 2px 26px;
-  border: 1px solid #2E4372;
-  text-decoration: none;
-  color: azure;
-}
-.nav-item:hover {
-  border: 1px solid #7887AB;
-}    
-a:hover{
-  color: #233458;
-}
 
-a{
-  text-decoration: none;
-   color: azure;
-   margin-left: 10px;
-   margin-top: 10px;
-}
- .push {
-    margin-left: auto;
- }
  .container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-top: 100px;
     flex-wrap: wrap;
-    
  }
+
+ button:hover {
+   cursor: pointer;
+   background: #233458;
+ }
+
+ button {
+   border-radius: 10px;
+   border: 2px solid #0044cc;
+   background-color: #0044cc;
+   font-size: 15px;
+   color: azure;
+   height: 30px;
+ }
+
+ #close {
+   background-color: #ff1a1a;
+   border: 2px solid #ff1a1a;
+ }
+span{
+  font-size: 16px;
+}
  @media screen and (max-width: 960px) {
 
  .container {

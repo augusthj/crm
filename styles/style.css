@@ -15,11 +15,12 @@ body {
    border: none;
    top: 0px;
    box-shadow: 0 15px 25px #03030380;
-   background-color: #2E4372;
+   background-color: #061539;
    font-family: "Zilla Slab", serif;
 }
 .logo:hover {
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+   border-radius: 30px;
  }
 
 a:hover{
@@ -44,18 +45,13 @@ a{
 
 .nav-item {
    display: flex;
-   flex-direction: column;   
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    width: 80px;
    margin: 2px 25px;
-   border: 1px solid #2E4372;
    text-decoration: none;
    color: azure;
-}
-
-.nav-item:hover {
-   border: 1px solid #7887AB;
 }
 
 .push-right {
@@ -75,7 +71,7 @@ a{
    }
 
    .push-right { margin-left: auto; }
-   
+
 }
 
 
@@ -101,4 +97,3 @@ a{
 
    .push-right { margin-left: auto; }
 }
-
