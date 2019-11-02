@@ -22,6 +22,19 @@ $(document).ready(function() {
           );
       });
     });
+
+    $(".search").click(function() {
+      let buscando = $("#putMeAnID").val();
+      console.log(buscando);
+      $(".card div h4").each(function(index, h4Element) {
+        let h4Text = h4Element.innerHTML;
+        if(h4Text.indexOf(buscando) < 0)    
+          $(this).parent().parent().css("display", "none");
+      })
+    });
+    
+
+  
   let newCompanyModal = $("#newCompany");
   let companyModal = $("#company");
   let editCompanyModal = $("#editCompanyModal");
