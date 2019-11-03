@@ -28,7 +28,7 @@
     margin: 8px;
   }
   .bg-primary{
-    background-color: #3f5fa5;
+    background-color:  #061539;
   }
   .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: #35518d;
