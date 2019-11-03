@@ -148,17 +148,17 @@ input {
 }
 
 .company-content {
-  height: 40%;
+  height: auto;
   width: 35%;
 }
 
 .editCompany-content {
-  height: 45%;
+  height: auto;
   width: 35%;
 }
 
 .newCompany-content {
-  height: 45%;
+  height: auto;
   width: 35%;
 }
 
@@ -242,6 +242,10 @@ input {
 }
 a:visited, a:link{
   color: azure;
+}
+
+.company-content>div {
+  margin-top: 5%;
 }
 
 @media screen and (max-width: 900px) {
